@@ -83,11 +83,13 @@ body {
 .nav-item a {
     color: white;
 }
-.section {
+.bigger {
     background-image:linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.746)), url(rename.jpg);
-    background-size: cover;
-    box-sizing: border-box;
+    background-size: cover; 
     background-attachment: fixed;
+    position: relative;
+    background-position: cover;
+    padding: 449px 0px;
 }
 .section1 {
     margin: opx;
@@ -155,7 +157,7 @@ body {
     border-radius: 34px;
 }
 .section2 {
-    padding: 90px 0px;
+    padding: 20px 0px;
     margin: 0px;
 }
 .back {
