@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
-    <title>Document</title>
+    <title>SIGN-IN</title>
     <style>
         .widt{
             width: 65%;
@@ -57,15 +57,12 @@
                                         <div class="modal fade" id="examModal">
                                             <div class="modal-dialog">
                                                 <div class="modal-content wid">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
                                                     <div class="modal-body">
                                                         <div class="container px-2 bos">
                                                             <div>
                                                                 <input type="email" class="form-control border-bottom rounded my-3"  placeholder="Your Email address" id="email">
-                                                                <input type="password" class="form-control border rounded my-2"  placeholder="Your password" id="password">
-                                                                <input type="password" class="form-control border rounded my-2"  placeholder="Your confirm password" id="password">
+                                                                <input type="password" class="form-control border rounded my-3"  placeholder="Your password" id="password">
+                                                                <input type="password" class="form-control border rounded my-3"  placeholder="Your confirm password" id="cpassword">
                                                                 <center class="pt-3">
                                                                     <button type="submit" class="btn btn-primary col-5" onclick="Update()">Update</button>
                                                                 </center>
@@ -93,11 +90,27 @@
         const SIGNIN = () =>{
             let userEmail =  email.value;
             let userPassword = password.value;
-            for (let index = 0; index < array.length; index++) {
-                
+            together= JSON.parse(localStorage.getItem("project"))
+            for (let i = 0; i < together.length; i++) {
+                if (userEmail == together[i].email && userPassword == together[i].password) {
+                    location.assign()
+                }else if (userEmail != together[i].email) {
+                    email.value = ""
+                }else if (userPassword != together[i].password) {
+                    password.value = ""
+                }
             }
         }
         const Update = () =>{
+            let userEmail =  email.value;
+            let userPassword = password.value;
+            let userconfirmPassword = cpassword.value;
+            together= JSON.parse(localStorage.getItem("project"))
+            for (let i = 0; i < together.length; i++) {
+                if (userEmail != together[i].email) {
+                    email.value = ""
+                }
+            }
             location.assign("sign-in.html")
         }
     </script>
