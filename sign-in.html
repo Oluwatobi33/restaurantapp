@@ -6,29 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
     <title>Document</title>
+    <style>
+        .widt{
+            width: 65%;
+            border-radius: 40px;
+        }
+        .bos{
+            /* box-shadow: 0 0 9px 2px black; */
+            border-radius: 10px;
+            padding: 5px 0;
+        }
+        @media only screen and (max-width: 600px)  {
+            .widt{
+                width: 100%;
+                border-radius: 40px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-dark">
 
     <div class="container py-5">
 
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">SIGN-IN</button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content widt">
                     <div class="modal-header">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="container">
-                            <h3 class="text-center">SIGN-IN</h3>
-                            <form class="py-2">
-                                <input type="email" class="form-control border rounded my-3"  placeholder="Your Email address" required>
-                                <input type="password" class="form-control border rounded py-2"  placeholder="Your password" required>
-                            </form>
+                        <div class="container px-2 bos">
+                            <h2 class="text-center" style="color: rgb(25, 25, 87);"><i>SIGN-IN</i></h2>
+                            <div>
+                                <input type="email" class="form-control border-bottom rounded my-3"  placeholder="Your Email address">
+                                <input type="password" class="form-control border rounded py-2"  placeholder="Your password">
+                                <div class="py-2" style="color: rgb(25, 25, 87);">
+                                    <input type="checkbox">Remember me <a href="#" style="text-decoration: none;padding-left: 20px;color: rgb(25, 25, 87);">Forget password?</a>
+                                </div>
+                                <center class="pt-3">
+                                    <button type="submit" class="btn btn-primary col-5">SIGN-IN</button>
+                                </center>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">SIGN-IN</button>
                     </div>
                 </div>
             </div>
