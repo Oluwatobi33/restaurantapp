@@ -77,7 +77,7 @@
                   <input type="text" class="form-control" value="" id="email" placeholder="Email">
                   <div id="err4"></div>
                   <label for="Password:" style="color:black;">Password</label>
-                  <input type="text" class="form-control" value="" id="pwd" placeholder="Password">
+                  <input type="text" class="form-control" maxlength="10" value="" id="pwd" placeholder="Password">
                   <div id="err5"></div>
                   <label for="phone:" style="color:black;">Phone-number</label>
                   <input type="tel" class="form-control" value="" id="pass" placeholder="Phone-number">
@@ -100,28 +100,21 @@
     </div>
     <script>
         var together = []
-        var firstName1 = fname.value;
-        var LastName1 = lname.value;
-        var address1 = add.value;
-        var Email1 = email.value;
-        var Pass = pwd.value; 
-        function sure(){
+        function show(){
           if(localStorage.project){
             together = JSON.parse(localStorage.project)
-        }
-        }
-        function show(){ 
+          } 
           let gd = document.getElementById('gen');
           let gd2 = gd.options[gd.selectedIndex].text;
           let rush = {
             Frname:fname.value,
             LstName:lname.value,
             Address:add.value,
-            email:email.value,
-            password:pwd.value,
+            Email:email.value,
+            Password:pwd.value,
             Gender:gd2
           }
-          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || pwd.value == ""){
+          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || gd2 == ""){
             err1.innerHTML = "Enter the value of the firstname"
             err1.style.color = "red";
             err2.innerHTML = "Enter the value of the Lastname"
