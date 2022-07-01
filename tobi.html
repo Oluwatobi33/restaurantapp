@@ -88,7 +88,6 @@
                       <option  value="1">Male</option>
                       <option  value="2">Female</option>
                     </select>
-                    <div id="err7"></div>
                   <div class=" inline modal-footer mx-auto">
                     <button type="submit" class="btn btn-primary" onclick="show()">Sign up</button>
                   </div>
@@ -107,8 +106,8 @@
         var Email1 = email.value;
         var Pass = pwd.value; 
         function sure(){
-          if(localStorage.together){
-            together = JSON.parse(localStorage.together)
+          if(localStorage.project){
+            together = JSON.parse(localStorage.project)
         }
         }
         function show(){ 
@@ -122,33 +121,27 @@
             Password:pwd.value,
             Gender:gd2
           }
-            if (fname.value == "" && lname.value == "" && add.value=="") {
-              err1.innerHTML = "Enter the value of the firstname"
-              err1.style.color = "red";
-              err2.innerHTML = "Enter the value of the lastname"
-              err2.style.color = "red";
-              err3.innerHTML = "Enter the value of the Address"
-              err3.style.color = "red";
-              // err4.innerHTML = "Enter the value of the Email"
-              // err4.style.color = "red";
-              // err5.innerHTML = "Enter the value of the Password"
-              // err5.style.color = "red";
-              // err6.innerHTML = "Enter the value of the PhoneNumber"
-              // err6.style.color = "red";
-              // err7.innerHTML = "Enter the value of the Gender"
-              // err7.style.color = "red";
-            }
-             else if(fname.value !== "" && lname.value !== ""){
-              err1.innerHTML = " "
-            }
-            else{
-              together.push(rush)
-              localStorage.setItem("project",JSON.stringify(together))
-            }
-            console.log(together)
+          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || pwd.value == ""){
+            err1.innerHTML = "Enter the value of the firstname"
+            err1.style.color = "red";
+            err2.innerHTML = "Enter the value of the Lastname"
+            err2.style.color = "red";
+            err3.innerHTML = "Enter the value of the address"
+            err3.style.color = "red";
+            err4.innerHTML = "Enter the value of the email"
+            err4.style.color = "red";
+            err5.innerHTML = "Enter the value of the password"
+            err5.style.color = "red";
+            err6.innerHTML = "Enter the value of the gender"
+            err6.style.color = "red";
           }
-          
-  
+        else {
+          together.push(rush)
+          localStorage.project = JSON.stringify(together)
+          console.log(together)
+          // location.assign("sign-in.html")
+        }
+      }
     </script>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
