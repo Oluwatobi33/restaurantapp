@@ -93,7 +93,8 @@
             together= JSON.parse(localStorage.getItem("project"))
             for (let i = 0; i < together.length; i++) {
                 if (userEmail == together[i].email && userPassword == together[i].password) {
-                    location.assign()
+                    // location.assign()
+                    alert()
                 }else if (userEmail != together[i].email) {
                     email.value = ""
                 }else if (userPassword != together[i].password) {

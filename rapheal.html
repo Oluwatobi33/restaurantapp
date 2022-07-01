@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+</head>
+<style>
+  img {
+    border-radius: 300px;
+
+  }
+
+  #boder {
+    border: none;
+  }
+
+  .boda {
+    border: none;
+  }
+
+  .boda {
+    border: none;
+  }
+</style>
+
+<body>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header mx-auto">
+          <h5 class="modal-title " id="exampleModalLabel wel">Welcome! Let's create your profile</h5>
+          <!-- <button type="button" class="btn-close d-flex justify-content-end" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body col-12 row ">
+          <div class=" col-6">
+            <img id="img" src="img/4571.jpg" alt="" height="200px">
+            <h5 id="nam"> Rapheal bukola</h5>
+          </div>
+          <div class="col-lg-5 col-sm-12">
+            <!-- <input id="boder" class="py-5" type="file" placeholder="Choose imge"> -->
+            <input id="boder" class="py-5" type="file" onchange="encodeImageFileAsURL(this)" />
+            <div>
+              <button class="boda" onmouseover="choose()">Or Choose defaults</button>
+
+              <div id="two">
+
+              </div>
+              <div class="d-none" id="tt">
+                <img id="im" src="/img/4571.jpg" alt="" height="55px">
+                <img id="im" src="/img/4571.jpg" alt="" height="50px">
+                <img id="im" src="/img/4571.jpg" alt="" height="50px">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class=" ps-3">
+          <h4>Add your location</h4>
+          <input class="pt-2" id="locate" type="text">
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  <script>
+    function encodeImageFileAsURL(element) {
+      var file = element.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function () {
+        console.log('RESULT', reader.result)
+        img.src = `reader.result`
+        localStorage.image = JSON.stringify(reader.result)
+      }
+      //   reader.readAsDataURL(file);
+      //   var proImage= new Image();
+      // proImage.src = 'data:image/png;base64,kiDinsil...';
+      // document.body.appendChild(proImage);
+    }
+
+    function choose() {
+      var one = document.getElementById("tt").innerHTML
+      var t = document.getElementById("two").innerHTML = one
+    }
+
+  </script>
+</body>
+
+</html>
