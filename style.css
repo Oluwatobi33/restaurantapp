@@ -1,23 +1,86 @@
-#bgblue{
-    background-color: rgb(36, 146, 182);
+
+body{
+  overflow: hidden;
 }
-.btn1 {
+#bgblue{
+    background-color:#15273B;
+  
+}
+.btn1 a{
     border: none;
-    
-    background: none;
-    color: white;
+   background: none;
+   color: white;
     font-weight: bolder;
     font-size: larger;
     }
   a{
     text-decoration: none;
+  }
+  a:hover{
+    color:white;
   }  
+ #user{
+  /* border: solid white; */
+  height: 12vh;
+  margin-left: 1px;
+  background-color: #214162;
+ }
+ .dress{
+  height: 6vh;
+  width: 60px;
+  background-color: #FF5722;
+ }
+  
+    
     
     .btn1:hover{
-border: solid white;
-background-color: white;
-color: black;
+border: solid#FF5722;
+
+background-color: #FF5722;
+color:white;
+
 right: 0px;
 border-radius: 40px 0 0 40px;
 
     }
+    #img{
+      border-radius: 300px;
+    }
+    .nav{
+      color: white;
+
+    }
+    .navbar{
+      background-color: #15283C;
+
+    }
+    .btns{
+      background-color: #FF5722;
+    }
+
+    .boda{
+      background:#0069DA ;
+      border-color:#0069DA;
+      color: white;
+      border-radius: 5px;
+  }
+  .boda:hover{
+      background-color:#38C5D9;
+      border-color: white;
+      border-radius: 5px;
+      transform: translateY(10px);
+      transition: 1s all ease-out;
+  }
+#bodda{
+  border-radius: 50px;
+}
+#size{
+  font-family: italic;
+  font-size: larger;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+#main{
+  overflow: scroll;
+  
+}

@@ -28,12 +28,11 @@
 </style>
 
 <body>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
+  
 
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header mx-auto">
@@ -42,8 +41,8 @@
         </div>
         <div class="modal-body col-12 row ">
           <div class=" col-6">
-            <img id="img" src="img/4571.jpg" alt="" height="200px">
-            <h5 id="nam"> Rapheal bukola</h5>
+            <img id="img" src="img/profile.PNG" alt="" height="200px">
+            <p id="nam"></p>
           </div>
           <div class="col-lg-5 col-sm-12">
             <!-- <input id="boder" class="py-5" type="file" placeholder="Choose imge"> -->
@@ -55,9 +54,9 @@
 
               </div>
               <div class="d-none" id="tt">
-                <img id="im" src="/img/4571.jpg" alt="" height="55px">
-                <img id="im" src="/img/4571.jpg" alt="" height="50px">
-                <img id="im" src="/img/4571.jpg" alt="" height="50px">
+                <img id="im" src="/img/profile.PNG" alt="" height="55px">
+                <img id="im" src="/img/profile.PNG" alt="" height="50px">
+                <img id="im" src="/img/profile.PNG" alt="" height="50px">
               </div>
             </div>
           </div>
@@ -71,26 +70,41 @@
 
         <div class="modal-footer">
 
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" onclick="main()">Save changes</button>
         </div>
       </div>
     </div>
   </div>
   <script src="./bootstrap.js"></script>
   <script>
-    function encodeImageFileAsURL(element) {
-      var file = element.files[0];
-      var reader = new FileReader();
-      reader.onloadend = function () {
-        console.log('RESULT', reader.result)
-        img.src = `reader.result`
-        localStorage.image = JSON.stringify(reader.result)
-      }
-      //   reader.readAsDataURL(file);
-      //   var proImage= new Image();
-      // proImage.src = 'data:image/png;base64,kiDinsil...';
-      // document.body.appendChild(proImage);
-    }
+    let raph = JSON.parse(localStorage.getItem("project"));
+    console.log(raph);
+    for(let r = 0; r < raph.length; r++){
+      nam.innerHTML =raph[r].Frname + '  ' +'  '+  raph[r].LstName
+// nem.innerHTML = (raph[r].Frname,raph[r].LstName)
+// welcome3.innerHTML = raph[r].emal 
+// welcome4.innerHTML = raph[r].gend 
+// welcome5.innerHTML = raph[r].phone
+// welcome6.innerHTML = raph[r].pass
+
+}
+const main = () => {
+location.assign("index.html")
+}
+
+    // function encodeImageFileAsURL(element) {
+    //   var file = element.files[0];
+    //   var reader = new FileReader();
+    //   reader.onloadend = function () {
+    //     console.log('RESULT', reader.result)
+    //     img.src = `reader.result`
+    //     localStorage.image = JSON.stringify(reader.result)
+    //   }
+    //   //   reader.readAsDataURL(file);
+    //   //   var proImage= new Image();
+    //   // proImage.src = 'data:image/png;base64,kiDinsil...';
+    //   // document.body.appendChild(proImage);
+    // }
 
     function choose() {
       var one = document.getElementById("tt").innerHTML

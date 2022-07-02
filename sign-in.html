@@ -18,13 +18,8 @@
             border-radius: 10px;
             padding: 5px 0;
         }
-        .nn {
-            border: 1px solid black;
-          margin: 12px 0;
-          height: 12px;
-          border: none;
-        }
-        .wid{
+
+        .wid {
             width: 65%;
             border-radius: 40px;
             margin-left: 350px;
@@ -61,14 +56,12 @@
                         <div class="container px-2 bos">
                             <h2 class="text-center" style="color: rgb(25, 25, 87);"><i>SIGN-IN</i></h2>
                             <div>
-                                <input type="text" id="email" class="form-control border rounded my-3"  placeholder="Your Email address">
-                                <div class="nn">
-                                    <small id="e1"></small>
-                                </div>
-                                <input type="text" id="pss" class="form-control border rounded my-2"  placeholder="Your password">
-                                <div class="nn">
-                                    <small id="e2"></small>
-                                </div>
+                                <input type="email" class="form-control border rounded my-3"
+                                    placeholder="Your Email address" id="email">
+                                    <small id="ppm" class="ps-3"></small>
+                                <input type="password" class="form-control border rounded my-2"
+                                    placeholder="Your password" id="password">
+                                    <small id="ppp" class="ps-3"></small>
                                 <div class="py-2" style="color: rgb(25, 25, 87);">
                                     <input type="checkbox">Remember me
                                     <a href="#" onclick=""
@@ -86,12 +79,10 @@
                                                                     placeholder="Your Email address" id="email">
                                                                 <input type="password"
                                                                     class="form-control border rounded my-3"
-                                                                    maxlength="10" placeholder="Your password"
-                                                                    id="password">
+                                                                    placeholder="Your password" id="password">
                                                                 <input type="password"
                                                                     class="form-control border rounded my-3"
-                                                                    maxlength="10" placeholder="Your confirm password"
-                                                                    id="cpassword">
+                                                                    placeholder="Your confirm password" id="cpassword">
                                                                 <center class="pt-3">
                                                                     <button type="submit" class="btn btn-primary col-5"
                                                                         onclick="Update()">Update</button>
@@ -105,7 +96,8 @@
                                     </a>
                                 </div>
                                 <center class="pt-3">
-                                    <button type="submit" class="btn btn-primary col-5" onclick="login()">SIGN-IN</button>
+                                    <button type="submit" class="btn btn-primary col-5"
+                                        onclick="SIGNIN()">SIGN-IN</button>
                                 </center>
                             </div>
                         </div>
@@ -135,8 +127,8 @@
             }  
             console.log(tobi);
         }
-        const Update = () =>{
-            let userEmail =  email.value;
+        const Update = () => {
+            let userEmail = email.value;
             let userPassword = password.value;
             let userconfirmPassword = cpassword.value;
             together = JSON.parse(localStorage.getItem("project"))
@@ -145,7 +137,7 @@
                     email.value = ""
                 }
             }
-            location.assign("sign-in.html")
+            location.assign("rapheal.html")
         }
     </script>
     <script src="./bootstrap.js"></script>
