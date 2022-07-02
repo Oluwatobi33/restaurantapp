@@ -71,11 +71,11 @@
               <div class="row  justify-content-center mt-5">
                 <div id="out" class="col-md-12 mm  border border-1 border-dark form-group px-4  rounded rounded-5">
                   <h1 class=" fw-bold text-center text-uppercase text-dark mt-4" style="font-size:19px ;">Registration page</h1>
-                  <input type="text" class="form-control" value="" id="fname" placeholder="Full Name">
+                  <input type="text" class="form-control" value="" id="fname" placeholder="FirstName">
                    <div class="dd">
                     <small id="err1" class=""></small>
                    </div>          
-                  <input type="text" class="form-control" value="" id="lname" placeholder="Full Name">
+                  <input type="text" class="form-control" value="" id="lname" placeholder="LastName">
                   <div class="dd">
                     <small id="err2" class=""></small>
                   </div>
@@ -119,14 +119,14 @@
           let gd = document.getElementById('gen');
           let gd2 = gd.options[gd.selectedIndex].text;
           let rush = {
-            Frname:fname.value,
+            ffname:fname.value,
             LstName:lname.value,
             Address:add.value,
             Email:email.value,
             Password:pwd.value,
             Gender:gd2
           }
-          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || gd2 == ""){
+          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || pwd.value == "" || gd2 == ""){
             err1.innerHTML = "Enter the value of the firstname"
             err1.style.color = "red";
             err2.innerHTML = "Enter the value of the Lastname"
@@ -140,13 +140,13 @@
             err6.innerHTML = "Enter the value of the gender"
             err6.style.color = "red";
           }
-        else {
-          together.push(rush)
-          localStorage.project = JSON.stringify(together)
-          console.log(together)
-          location.assign("sign-in.html")
+          else {
+            together.push(rush)
+            localStorage.project = JSON.stringify(together)
+            console.log(together)
+            location.assign("sign-in.html")
+          }
         }
-      }
     </script>
     <script src="./bootstrap.js"></script>
 </body>
