@@ -14,7 +14,7 @@
 
 <body>
   <section class="text-center mx-auto row justify-content-center   ">
-    <ul id="bgblue" class="sidebar-dropdown   list-unstyled col-lg-2 col-md-4  text-center">
+    <ul id="bgblue" class="sidebar-dropdown  list-unstyled col-lg-2 col-md-4  text-center">
       <li id="user" class="col-12 text-light d-flex  pt-3  ">
         <img id="img" src="img/profile.PNG" alt="" height="60px">
         <div class="">
@@ -37,7 +37,7 @@
 
       <div class="py-3 d-flex">
 
-        <li class="btn1 col-12  ms-3 py-2 "><i class="fa fa-book col-1 text-light" aria-hidden="true"></i><a
+        <li class="btn1 col-12 ms-3  py-2 "><i class="fa fa-book col-1 text-light" aria-hidden="true"></i><a
             href="note.html">Notes</a> </li>
       </div>
 
@@ -62,10 +62,10 @@
             href="index.html">Settings</a> </li>
       </div>
     </ul>
-    <div class="  bg-light col-lg-10 col-md-8 col-sm-12 ">
-      <header class=" ">
+    <div class="  bg-light col-lg-10 col-md-8 col-sm-12 border border-2 border-success">
+      <header class="">
 
-        <nav class="navbar navbar-expand-lg col-12  navbar-dark ">
+        <nav class="navbar navbar-expand-lg   navbar-dark ">
           <div class="dress col-1 ms-1"><i class="fa fa-inbox fs-1 text-light" aria-hidden="true"></i></div>
           <div class="container-fluid">
             <h4 class="nav">Gitpro</h4>
@@ -109,59 +109,52 @@
       </header>
 
 
-      <section id="main" style="height: 91vh;" class=" col-12 justify-content-center">
-        <div id="pro" class="col-12 border border-5 d-flex justify-content-start">
-          <h5>Profile</h3>
-        </div>
-        <div class="main col-12  d-flex align-items-center px-5 text-center  justify-content-center ">
-
-          <div class="col-10 d-flex align-items-center p-5 text-center  justify-content-center ">
-            <div id="bodda" class="modal-body    d-flex justify-content-center  border border-3  ">
-
-              <div class=" col-4 ">
-                <img id="img" src="img/profile.PNG" alt="" height="200px">
-                <p id="nam"></p>
-                <input id="boder" class="py-2" type="file" />
-                <div>
-                  <button class="boda col-8 p-2 mb-5" onmouseover="choose()">Edit Imge</button>
-
-                  <div id="two">
-
-                  </div>
-                  <div class="d-none" id="tt">
-                    <img id="im" src="/img/profile.PNG" alt="" height="55px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
-                  </div>
-
-                </div>
+      <section id="main" style="height: 95vh;" class="col-12  justify-content-center">
+        <div id="wow" class="  mx-auto">
+          <div id="ok" class="  ">
+          <table  class="table table-bordered shadow my-3 text-center">
+              <thead class="h5">
+                  <tr>
+                      <td id="td">S/N</td>
+                      <td id="td">FIRSTNAME</td>
+                      <td id="td">LASTNAME</td>
+                      <td id="td">EMAIL</td>
+                      <td id="td">PHONE</td>
+                      <td id="td">GENDER</td>
+                      <td id="td">PASSWORD</td>
+                      <td colspan="2">Action</td>
+                  </tr>
+              </thead>
+              
+                  <tbody id="file" class="h-25"></tbody>
               </div>
-              <div id="size" class="col-5 ms-4 d-flex align-items-center">
-
-                <div>
-
-                  <p id="fname"></p>
-
-                  <p id="lname"></p>
-                  <p id="gmail"></p>
-                  <p id="phone"></p>
-                  <p id="gend"></p>
-                  <p id="pass"></p>
-                </div>
-
-
-              </div>
-
-
-            </div>
+          </table> 
+         </div>
+         
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit page</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <input type="text" class='form-control'id='firame'>
+           <input type="text"class='form-control'id='lasame'>
+           <input type="text"class='form-control'id='gmail'>
+           <input type="text"class='form-control' id="genda">
+           <input type="text"class='form-control' id="phonum">
+           <input type="text"class='form-control'id='PASSWORD'>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" onclick="updat()" class="btn btn-primary">Save changes</button>
           </div>
         </div>
-        <!-- <section  class="col-6 text-center">
-        <p>
-          Consumers access your website to learn more information about your business. A welcome message can make them feel valued and persuade them to peruse your inventory or subscribe to your mailing list. If you're involved in creating or updating your company's website, it's important to learn how to write a welcome message that communicates your brand identity in a concise, engaging format. In this article, we discuss the definition of a welcome message for a website and review steps, tips and examples for crafting a quality message.
-        </p>
-        
-       </section> -->
+      </div>
+    </div>
+    
       </section>
 
 
@@ -172,22 +165,52 @@
   </section>
 
 
-
   <script src="./bootstrap.js"></script>
   <script>
     let raph = JSON.parse(localStorage.getItem("project"));
-    console.log(raph);
-    for (let r = 0; r < raph.length; r++) {
-      nam.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      fname.innerHTML = raph[r].ffname
-      lname.innerHTML = raph[r].LstName
-      gmail.innerHTML = raph[r].Email
-      phone.innerHTML = raph[r].Address
-      pass.innerHTML = raph[r].Password
-
-
-    }
+    for(let r = 0; r < raph.length; r++){
+      nam2.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
+      }
+var edite;
+          var f ='';
+          let rap = JSON.parse(localStorage.getItem("project"));
+        for(i=0;i<rap.length;i++){
+          f+= "<tr>"+"<td>"+[i+1]+"</td><td>"+rap[i].ffname+"</td><td>"+rap[i].LstName+"</td><td>"+rap[i].Email+"</td><td>"+rap[i].phone +"</td><td>" +rap[i].Gender+ "</td><td>" +rap[i].Password+"</td><td><button class='btn btn-danger' onclick='del("+i+")'>Delete</button></td><td><button class='btn btn-success'onclick='edit("+i+")'data-bs-toggle='modal' data-bs-target='#exampleModal'>Edit</button></td></tr>";
+          console.log(rap[i]);
+          document.getElementById("file").innerHTML = f;
+      } 
+      function del(i){
+         var conf= confirm("Are You Sure You Want To Delete")
+          if(conf){
+             customers=JSON.parse(localStorage.getItem("project")) 
+             customers.splice(i,1)
+             localStorage.setItem("project",JSON.stringify(customers))
+             location.reload()
+          }
+      }
+      function edit(i){
+          customers =JSON.parse(localStorage.getItem("project"))
+          firame.value=customers[i].ffname
+          lasame.value=customers[i].lstName
+          gmail.value=customers[i].Email
+          genda.value=customers[i].Gender;
+          phonum.value=customers[i].phone
+          PASSWORD.value=customers[i].password;
+          var edite=i;
+      }
+      function updat(){
+        custom =JSON.parse(localStorage.getItem("project"))
+        custom.splice(edite,1,{
+            ffname:firame.value,
+            lstName:lasame.value,
+            Email:gmail.value,
+            Gender:genda.value,
+            phone:phonum.value,
+            password:PASSWORD.value
+        })
+        localStorage.setItem("project",JSON.stringify(custom))
+        location.reload()
+      }
   </script>
 </body>
 
