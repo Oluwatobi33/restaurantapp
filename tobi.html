@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./bootstrap.css">
   <link rel="stylesheet" href="style.css">
   <title>SIGN UP PAGE</title>
   <style>
@@ -17,7 +17,7 @@
           display: flex;
           flex-direction: column;
           width: 55vh;
-          height: 88vh !important;
+          height: 90vh !important;
           pointer-events: auto;
           background-color: #fff;
           background-clip: padding-box;
@@ -39,9 +39,16 @@
         .mm {
           border-radius: 20px !important;
           box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
+          height: 82vh !important;
         }
         .okay {
             border-radius: 53px;
+        }
+        .dd {
+          border: 1px solid black;
+          margin: 10px 0;
+          height: 13px;
+          border: none;
         }
   </style>
 </head>
@@ -64,26 +71,31 @@
               <div class="row  justify-content-center mt-5">
                 <div id="out" class="col-md-12 mm  border border-1 border-dark form-group px-4  rounded rounded-5">
                   <h1 class=" fw-bold text-center text-uppercase text-dark mt-4" style="font-size:19px ;">Registration page</h1>
-                  <label for="firstName:" style="color:black;">First-Name</label>
                   <input type="text" class="form-control" value="" id="fname" placeholder="Full Name">
-                  <div id="err1"></div>
-                  <label for="LastName:" style="color:black;">Last-Name</label>
+                   <div class="dd">
+                    <small id="err1" class=""></small>
+                   </div>          
                   <input type="text" class="form-control" value="" id="lname" placeholder="Full Name">
-                  <div id="err2"></div>
-                  <label for="LastName:" style="color:black;">Address</label>
+                  <div class="dd">
+                    <small id="err2" class=""></small>
+                  </div>
                   <input type="text" class="form-control" value="" id="add" placeholder="Address">
-                  <div id="err3"></div>
-                  <label for="Email:" style="color:black;">Email</label>
+                  <div class="dd">
+                    <small id="err3" class=""></small>
+                  </div>
                   <input type="text" class="form-control" value="" id="email" placeholder="Email">
-                  <div id="err4"></div>
-                  <label for="Password:" style="color:black;">Password</label>
-                  <input type="text" class="form-control" maxlength="10" value="" id="pwd" placeholder="Password">
-                  <div id="err5"></div>
-                  <label for="phone:" style="color:black;">Phone-number</label>
+                  <div class="dd">
+                    <small id="err4" class=""></small>
+                  </div>
+                  <input type="text" class="form-control" value="" id="pwd" placeholder="Password">
+                  <div class="dd">
+                    <small id="err5" class=""></small>
+                  </div>
                   <input type="tel" class="form-control" value="" id="pass" placeholder="Phone-number">
-                  <div id="err6"></div>
-                  <label for="phone:" style="color:black;">Gender</label>
-                    <select class="form-control my-2" id="gen">
+                  <div class="dd">
+                    <small id="err6" class=""></small>
+                  </div>
+                    <select class="form-control" id="gen">
                       <option value="">Choose Gender</option>
                       <option  value="1">Male</option>
                       <option  value="2">Female</option>
@@ -136,7 +148,7 @@
         }
       }
     </script>
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <script src="./bootstrap.js"></script>
 </body>
 
 </html>
