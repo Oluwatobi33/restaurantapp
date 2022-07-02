@@ -111,17 +111,10 @@
     </div>
     <script>
         var together = []
-        var firstName1 = fname.value;
-        var LastName1 = lname.value;
-        var address1 = add.value;
-        var Email1 = email.value;
-        var Pass = pwd.value; 
-        function sure(){
+        function show(){
           if(localStorage.project){
             together = JSON.parse(localStorage.project)
-        }
-        }
-        function show(){ 
+          } 
           let gd = document.getElementById('gen');
           let gd2 = gd.options[gd.selectedIndex].text;
           let rush = {
