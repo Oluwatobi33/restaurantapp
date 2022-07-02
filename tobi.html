@@ -17,7 +17,7 @@
           display: flex;
           flex-direction: column;
           width: 55vh;
-          height: 88vh !important;
+          height: 90vh !important;
           pointer-events: auto;
           background-color: #fff;
           background-clip: padding-box;
@@ -39,9 +39,16 @@
         .mm {
           border-radius: 20px !important;
           box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
+          height: 82vh !important;
         }
         .okay {
             border-radius: 53px;
+        }
+        .dd {
+          border: 1px solid black;
+          margin: 10px 0;
+          height: 13px;
+          border: none;
         }
   </style>
 </head>
@@ -63,26 +70,31 @@
               <div class="row  justify-content-center mt-5">
                 <div id="out" class="col-md-12 mm  border border-1 border-dark form-group px-4  rounded rounded-5">
                   <h1 class=" fw-bold text-center text-uppercase text-dark mt-4" style="font-size:19px ;">Registration page</h1>
-                  <label for="firstName:" style="color:black;">First-Name</label>
-                  <input type="text" class="form-control" value="" id="fname" placeholder="Full Name">
-                  <div id="err1"></div>
-                  <label for="LastName:" style="color:black;">Last-Name</label>
-                  <input type="text" class="form-control" value="" id="lname" placeholder="Full Name">
-                  <div id="err2"></div>
-                  <label for="LastName:" style="color:black;">Address</label>
+                  <input type="text" class="form-control" value="" id="fname" placeholder="FirstName">
+                   <div class="dd">
+                    <small id="err1" class=""></small>
+                   </div>          
+                  <input type="text" class="form-control" value="" id="lname" placeholder="LastName">
+                  <div class="dd">
+                    <small id="err2" class=""></small>
+                  </div>
                   <input type="text" class="form-control" value="" id="add" placeholder="Address">
-                  <div id="err3"></div>
-                  <label for="Email:" style="color:black;">Email</label>
+                  <div class="dd">
+                    <small id="err3" class=""></small>
+                  </div>
                   <input type="text" class="form-control" value="" id="email" placeholder="Email">
-                  <div id="err4"></div>
-                  <label for="Password:" style="color:black;">Password</label>
+                  <div class="dd">
+                    <small id="err4" class=""></small>
+                  </div>
                   <input type="text" class="form-control" value="" id="pwd" placeholder="Password">
-                  <div id="err5"></div>
-                  <label for="phone:" style="color:black;">Phone-number</label>
+                  <div class="dd">
+                    <small id="err5" class=""></small>
+                  </div>
                   <input type="tel" class="form-control" value="" id="pass" placeholder="Phone-number">
-                  <div id="err6"></div>
-                  <label for="phone:" style="color:black;">Gender</label>
-                    <select class="form-control my-2" id="gen">
+                  <div class="dd">
+                    <small id="err6" class=""></small>
+                  </div>
+                    <select class="form-control" id="gen">
                       <option value="">Choose Gender</option>
                       <option  value="1">Male</option>
                       <option  value="2">Female</option>
@@ -99,28 +111,21 @@
     </div>
     <script>
         var together = []
-        var firstName1 = fname.value;
-        var LastName1 = lname.value;
-        var address1 = add.value;
-        var Email1 = email.value;
-        var Pass = pwd.value; 
-        function sure(){
+        function show(){
           if(localStorage.project){
             together = JSON.parse(localStorage.project)
-        }
-        }
-        function show(){ 
+          } 
           let gd = document.getElementById('gen');
           let gd2 = gd.options[gd.selectedIndex].text;
           let rush = {
-            Frname:fname.value,
+            ffname:fname.value,
             LstName:lname.value,
             Address:add.value,
             Email:email.value,
             Password:pwd.value,
             Gender:gd2
           }
-          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || pwd.value == ""){
+          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || pwd.value == "" || gd2 == ""){
             err1.innerHTML = "Enter the value of the firstname"
             err1.style.color = "red";
             err2.innerHTML = "Enter the value of the Lastname"
@@ -134,13 +139,13 @@
             err6.innerHTML = "Enter the value of the gender"
             err6.style.color = "red";
           }
-        else {
-          together.push(rush)
-          localStorage.project = JSON.stringify(together)
-          console.log(together)
-          location.assign("sign-in.html")
+          else {
+            together.push(rush)
+            localStorage.project = JSON.stringify(together)
+            console.log(together)
+            location.assign("sign-in.html")
+          }
         }
-      }
     </script>
     <script src="./bootstrap.js"></script>
 </body>
