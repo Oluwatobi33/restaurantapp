@@ -118,17 +118,7 @@
                                     </a>
                                 </div>
                                 <center class="pt-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     <button type="submit" class="btn btn-primary col-5" onclick="login()">SIGN-IN</button>
-=======
-                                    <button type="submit" class="btn btn-primary col-5"
-                                        onclick="SIGNIN()">SIGN-IN</button>
->>>>>>> 3af8edfda1b9d7c91288529353bbef015910e2a4
-=======
-                                    <button type="submit" class="btn btn-primary col-5"
-                                        onclick="SIGNIN()">SIGN-IN</button>
->>>>>>> 87664080481dd0074206486e0ee741db1bb7c341
                                 </center>
                             </div>
                         </div>
@@ -139,67 +129,6 @@
     </div>
 
     <script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    function login(){
-        mail = email.value;
-        pass = pss.value;
-        tobi = JSON.parse(localStorage.getItem("project"));
-        for (i = 0; i<tobi.length; i++) {
-            // if(mail == tobi[i].Email&&pass == tobi[i].Password){
-            //     window.location.href = "rapheal.html";
-            //     e1.innerHTML = "";
-            //     e2.innerHTML = "";   
-            // }
-            if(mail !== tobi[i].Email&&pass !== tobi[i].Password ){
-                e1.innerHTML = 'Enter the value of the email';
-                e1.style.color = "red";
-                e2.innerHTML = "Enter the value of the password";
-                e2.style.color = "red";  
-            }  
-        }  
-        console.log(tobi);
-    }
-        // const SIGNIN = () =>{
-        //     let userEmail =  email.value;
-        //     let userPassword = password.value;
-        //     together = JSON.parse(localStorage.getItem("project"))
-        //     for (let i = 0; i < together.length; i++) {
-        //         if (userEmail == together[i].Email&&userPassword == together[i].Password) {
-        //             location.assign("rapheal.html")
-        //         }else if (userEmail !== together[i].email) {
-        //             email.value = ""
-        //         }else if (userPassword !== together[i].password) {
-        //             password.value = ""
-        //         }
-        //     }
-        //     console.log(together)
-        // }
-        const Update = () =>{
-            let userEmail =  email.value;
-=======
-        const SIGNIN = () => {
-
-           
-
-        let userEmail =  email.value;
-        let userPassword = password.value;
-        together= JSON.parse(localStorage.getItem("project"))
-        for (let i = 0; i < together.length; i++) {
-            if (userEmail == together[i].email && userPassword == together[i].password) {
-                location.assign("rapheal.html")
-                alert()
-            }else if (userEmail != together[i].email) {
-                email.value = ""
-            }else if (userPassword != together[i].password) {
-                password.value = ""
-            }
-        }
-        }
-        const Update = () => {
-            let userEmail = email.value;
->>>>>>> 3af8edfda1b9d7c91288529353bbef015910e2a4
-=======
         function login(){
             mail = email.value;
             pass = pss.value;
@@ -221,7 +150,6 @@
         }
         const Update = () => {
             let userEmail = email.value;
->>>>>>> 87664080481dd0074206486e0ee741db1bb7c341
             let userPassword = password.value;
             let userconfirmPassword = cpassword.value;
             together = JSON.parse(localStorage.getItem("project"))
