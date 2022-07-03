@@ -124,7 +124,7 @@ label, input, textarea{
     grid-gap: 1.5rem;
 }
 .note{
-    border: 3px solid #33CA7F;
+    /* border: 3px solid #33CA7F; */
     padding: 1.5rem;
     transition: all 250ms ease-in-out;
 }
