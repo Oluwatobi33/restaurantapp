@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="note.css">
     <title>NOTEPAD</title>
 </head>
-<body>
+<body onload="show()">
     
     <div>
 
@@ -78,7 +78,7 @@
                     </nav>
                 </header>
 
-                <section id="main" style="height: 95vh;" class="col-12  justify-content-center">
+                <section id="main" style="height: 905vh;" class="col-12  justify-content-center">
                     <div class="modal-container">
                         <div class="modal">
                             <button class="modal_btn">&times;</button>
@@ -99,19 +99,11 @@
                             <input type="submit" onclick="save()" id="hov">
                         </form>
                     </div>
-                    <!-- <div class="note-container"> -->
-                        <!-- <div class="note" id="notepad"> -->
-                            <!-- <h2 class="note_title" id="notetitle"></h2>
-                            <p class="note_body" id="notebody"></p> -->
-                            <!-- <div class="note_btn">
-                                <button class="note_btn note_view">View Detail</button>
-                                <button class="note_btn note_delete">Delete Note</button>
-                            </div>
-                        </div> -->
-                        
-                    <!-- </div> -->
-                    <!-- <div id="notepad"></div> -->
-                    <table border="1" id="display"></table>
+                    <div class="note-container">
+                        <div class="note" id="display">
+                            <div class="note_btn" id="displa2"></div>
+                        </div> 
+                    </div>
                 </section>
             </div>
     

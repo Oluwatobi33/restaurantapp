@@ -63,10 +63,7 @@ body{
     color: #a4b1aa;
     box-shadow: none;
 }
-.form-container{
-    max-width: 100%;
-    margin: 1rem auto;
-}
+/*   */
 h1{
     font-size: 3rem;
     text-align: center;
