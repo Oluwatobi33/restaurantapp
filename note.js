@@ -1,3 +1,15 @@
+let raph = JSON.parse(localStorage.getItem("project"));
+    console.log(raph);
+    for(let r = 0; r < raph.length; r++){
+      nam.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
+      nam2.innerHTML =raph[r].Frname + '  ' +'  '+  raph[r].LstName
+      fname.innerHTML =raph[r].Frname
+      lname.innerHTML=raph[r].LstName
+      gmail.innerHTML=raph[r].Email
+      phone.innerHTML=raph[r].Address
+      pass.innerHTML=raph[r].Password
+}
+
 details = [];
 const save = () => {
     if (localStorage.member) {
