@@ -56,7 +56,7 @@
     </style>
 </head>
 
-<body class="bg-dark" onload="login()">
+<body class="bg-dark">
     <div class="container py-5">
         <div class="" id="exampleModal">
             <div class="modal-dialog">
@@ -65,8 +65,8 @@
                         <div class="container px-2 bos">
                             <h2 class="text-center" style="color: rgb(25, 25, 87);"><i>SIGN-IN</i></h2>
                             <div>
-                                <input type="email" id="em" class="form-control border rounded my-4" placeholder="Your Email address">
-                                <input type="password"  id="pss" class="form-control border rounded my-3" placeholder="Your password">
+                                <input type="email" id="em" class="form-control border rounded my-4" placeholder="Your Email address"><small id="e1"></small>
+                                <input type="password"  id="pss" class="form-control border rounded my-3" placeholder="Your password"><small id="e2"></small>
                                 <div class="py-2" style="color: rgb(25, 25, 87);">
                                     <input type="checkbox">Remember me
                                     <a href="#" onclick="" class="for"><span type="button" data-bs-toggle="modal" data-bs-target="#examModal">Forget password?</span>
@@ -98,8 +98,7 @@
                                     </a>
                                 </div>
                                 <center class="pt-3">
-                                    <button type="submit" class="btn btn-primary col-5"
-                                        onclick="login()">SIGN-IN</button>
+                                    <button type="submit" class="btn btn-primary col-5" onclick="login()">SIGN-IN</button>
                                 </center>
                             </div>
                         </div>
@@ -121,8 +120,10 @@
                     e2.innerHTML = "";   
                 }
                 if (mail !== tobi[i].Email && pass !== tobi[i].Password) {
-                    em = ""
-                    pss = "";
+                    e1.innerHTML = "Enter your email";
+                    e1.style.color = "red";
+                    e2.innerHTML = "Enter your Password"; 
+                    e2.style.color = "red";  
                 }
             }
             console.log(tobi);
