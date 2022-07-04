@@ -63,8 +63,8 @@
 
         </div>
         <div class=" ps-3">
-          <h4>Add your location</h4>
-          <input class="pt-2" id="locate" type="text">
+          <h4>Your location</h4>
+          <p id="locate"></p>
 
         </div>
 
@@ -80,9 +80,8 @@
     let raph = JSON.parse(localStorage.getItem("project"));
     console.log(raph);
     for(let r = 0; r < raph.length; r++){
-      nam.innerHTML =raph[r].Frname + '  ' +'  '+  raph[r].LstName
-// nem.innerHTML = (raph[r].Frname,raph[r].LstName)
-// welcome3.innerHTML = raph[r].emal 
+      nam.innerHTML =raph[r].Frname + '  ' +'  '+  raph[r].LstN
+location.innerHTML = raph[r].Address
 // welcome4.innerHTML = raph[r].gend 
 // welcome5.innerHTML = raph[r].phone
 // welcome6.innerHTML = raph[r].pass

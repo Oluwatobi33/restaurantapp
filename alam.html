@@ -14,7 +14,7 @@
 
 <body>
   <section class="text-center mx-auto row justify-content-center   ">
-    <ul id="bgblue" class="sidebar-dropdown  list-unstyled col-lg-2 col-md-4  text-center">
+    <ul id="bgblue" class="sidebar-dropdown   list-unstyled col-lg-2 col-md-4  text-center">
       <li id="user" class="col-12 text-light d-flex  pt-3  ">
         <img id="img" src="img/profile.PNG" alt="" height="60px">
         <div class="">
@@ -37,7 +37,7 @@
 
       <div class="py-3 d-flex">
 
-        <li class="btn1 col-12 ms-3  py-2 "><i class="fa fa-book col-1 text-light" aria-hidden="true"></i><a
+        <li class="btn1 col-12  ms-3 py-2 "><i class="fa fa-book col-1 text-light" aria-hidden="true"></i><a
             href="note.html">Notes</a> </li>
       </div>
 
@@ -62,10 +62,10 @@
             href="index.html">Settings</a> </li>
       </div>
     </ul>
-    <div class="  bg-light col-lg-10 col-md-8 col-sm-12">
-      <header class="">
+    <div class="  bg-light col-lg-10 col-md-8 col-sm-12 ">
+      <header class=" ">
 
-        <nav class="navbar navbar-expand-lg   navbar-dark ">
+        <nav class="navbar navbar-expand-lg col-12  navbar-dark ">
           <div class="dress col-1 ms-1"><i class="fa fa-inbox fs-1 text-light" aria-hidden="true"></i></div>
           <div class="container-fluid">
             <h4 class="nav">Gitpro</h4>
@@ -91,7 +91,6 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="alam.html">Alam</a></li>
                     <li><a class="dropdown-item" href="currentlocation.html">current location</a></li>
-                  
                     <li>
                       <hr class="dropdown-divider">
                     </li>
@@ -110,54 +109,19 @@
       </header>
 
 
-      <section id="main" style="height: 95vh;" class="col-12  justify-content-center">
-        <div id="wow" class="  mx-auto">
-          <div id="ok" class="  ">
-          <table  class="table table-bordered shadow my-3 text-center">
-              <thead class="h5">
-                  <tr>
-                      
-                      <td id="td">FIRSTNAME</td>
-                      <td id="td">LASTNAME</td>
-                      <td id="td">EMAIL</td>
-                      <td id="td">PHONE</td>
-                      <td id="td">GENDER</td>
-                      <td id="td">PASSWORD</td>
-                      <td id="td">location</td>
-                      <td colspan="2">Action</td>
-                  </tr>
-              </thead>
-              
-                  <tbody id="file" class="h-25"></tbody>
-              </div>
-          </table> 
-         </div>
-         
-         <!-- Modal -->
-         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Edit page</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-           <input type="text" class='form-control'id='firame'>
-           <input type="text"class='form-control'id='lasame'>
-           <input type="text"class='form-control'id='gmail'>
-           <input type="text"class='form-control' id="genda">
-           <input type="text"class='form-control' id="loca">
-           <input type="text"class='form-control' id="phonum">
-           <input type="text"class='form-control'id='PASSWORD'>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" onclick="updat()" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+      <section id="main" style="height: 91vh;" class=" col-12 justify-content-center">
+        <section>
+            <div class="clock">
+                <div class="container d-flex ">
+                   <h2 id="hours">00</h2> 
+                   <h2 class="dot">:</h2>
+                   <h2 id="minutes">00</h2>
+                   <h2 class="dot">:</h2>
+                   <h2 id="seconds">00</h2>
+                   <span id="ampm">AM</span>
+                </div>
+            </div>
+          </section>
       </section>
 
 
@@ -168,54 +132,45 @@
   </section>
 
 
+
   <script src="./bootstrap.js"></script>
   <script>
     let raph = JSON.parse(localStorage.getItem("project"));
-    for(let r = 0; r < raph.length; r++){
-      nam2.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
+    console.log(raph);
+    for (let r = 0; r < raph.length; r++) {
+   
+      nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
+    
+
+    }
+  </script>
+  <script>
+     var hour = document.getElementById("hours");
+    var minute = document.getElementById('minutes');
+    var second = document.getElementById('seconds');
+    var ampm = document.getElementById('ampm'); 
+    setInterval(function(){
+      var h= new Date().getHours();
+      var m = new Date().getMinutes();
+      var s = new Date().getSeconds();
+      var am='AM';
+      if (h>12){
+        h=h-12;
+        am= 'PM';
       }
-var edite;
-          var f ='';
-          let rap = JSON.parse(localStorage.getItem("project"));
-        for(i=0;i<rap.length;i++){
-          f= "<tr>"+"<td>"+rap[i].ffname+"</td><td>"+rap[i].LstName+"</td><td>"+rap[i].Email+"</td><td>"+rap[i].phone +"</td><td>" +rap[i].Gender+ "</td><td>" +rap[i].Password+"</td><td>"+rap[i].Address +"</td>  <td><button class='btn btn-danger' onclick='del("+i+")'>Delete</button></td><td><button class='btn btn-success'onclick='edit("+i+")'data-bs-toggle='modal' data-bs-target='#exampleModal'>Edit</button></td></tr>";
-          console.log(rap[i]);
-          document.getElementById("file").innerHTML = f;
-      } 
-      function del(i){
-         var conf= confirm("Are You Sure You Want To Delete")
-          if(conf){
-             customers=JSON.parse(localStorage.getItem("project")) 
-             customers.splice(i,1)
-             localStorage.setItem("project",JSON.stringify(customers))
-             location.reload()
-          }
+      if(h<10){
+       h= "0"+h
       }
-      function edit(i){
-          customers =JSON.parse(localStorage.getItem("project"))
-          firame.value=customers[i].ffname;
-          lasame.value=customers[i].LstName;
-          gmail.value=customers[i].Email;
-          genda.value=customers[i].Gender;
-          phonum.value=customers[i].phone;
-          loca.value=customers[i].Address;
-          PASSWORD.value=customers[i].password;
-          var edite=i;
+      else{
+       h= h
       }
-      function updat(i){
-        custom =JSON.parse(localStorage.getItem("project"))
-        custom.splice(edite,1,{
-            ffname:firame.value,
-            lstName:lasame.value,
-            Email:gmail.value,
-            Gender:genda.value,
-            Address:loca.value,
-            phone:phonum.value,
-            password:PASSWORD.value,
-        })
-        localStorage.setItem("project",JSON.stringify(custom))
-        location.reload("Edit.html")
-      }
+      m = (m<10)? '0' + m : m;
+      s = (s<10)? '0' + s : s;
+      hour.innerHTML=h;
+      second.innerHTML=s;
+      minutes.innerHTML=m;
+      ampm.innerHTML=am;
+    } )
   </script>
 </body>
 

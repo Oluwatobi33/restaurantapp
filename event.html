@@ -110,59 +110,52 @@
 
 
       <section id="main" style="height: 91vh;" class=" col-12 justify-content-center">
-        <div id="pro" class="col-12 border border-5 d-flex justify-content-start">
-          <h5>Profile</h3>
-        </div>
-        <div class="main col-12  d-flex align-items-center px-5 text-center  justify-content-center ">
-
-          <div class="col-10 d-flex align-items-center p-5 text-center  justify-content-center ">
-            <div id="bodda" class="modal-body    d-flex justify-content-center  border border-3  ">
-
-              <div class=" col-4 ">
-                <img id="img" src="img/profile.PNG" alt="" height="200px">
-                <p id="nam"></p>
-                <input id="boder" class="py-2" type="file" />
-                <div>
-                  <button class="boda col-8 p-2 mb-5" onmouseover="choose()">Edit Imge</button>
-
-                  <div id="two">
-
-                  </div>
-                  <div class="d-none" id="tt">
-                    <img id="im" src="/img/profile.PNG" alt="" height="55px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
-                  </div>
-
+        <div id="wow" class="  mx-auto">
+            <div id="ok" class="  ">
+            <!-- <table  class="table table-bordered shadow my-3 text-center">
+                <thead class="h5">
+                    <tr>
+                        
+                        <td id="td">FIRSTNAME</td>
+                        <td id="td">LASTNAME</td>
+                        <td id="td">EMAIL</td>
+                        <td id="td">PHONE</td>
+                        <td id="td">GENDER</td>
+                        <td id="td">PASSWORD</td>
+                        <td id="td">location</td>
+                        <td colspan="2">Action</td>
+                    </tr>
+                </thead> -->
+                
+                    <tbody id="file" class="h-25"></tbody>
                 </div>
-              </div>
-              <div id="size" class="col-5 ms-4 d-flex align-items-center">
-
-                <div>
-
-                  <p id="fname"></p>
-
-                  <p id="lname"></p>
-                  <p id="gmail"></p>
-                  <p id="phone"></p>
-                  <p id="gend"></p>
-                  <p id="locate"></p>
-                  <p id="pass"></p>
-                </div>
-
-
-              </div>
-
-
+            </table> 
+           </div>
+           
+           <!-- Modal -->
+           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit page</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             <input type="text" class='form-control'id='date'>
+             <input type="text"class='form-control'id='Name of the event'>
+             <input type="text"class='form-control'id='location'>
+             <input type="text"class='form-control' id="ti">
+             <input type="text"class='form-control' id="loca">
+             <input type="text"class='form-control' id="phonum">
+             <input type="text"class='form-control'id='PASSWORD'>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" onclick="updat()" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
-        <!-- <section  class="col-6 text-center">
-        <p>
-          Consumers access your website to learn more information about your business. A welcome message can make them feel valued and persuade them to peruse your inventory or subscribe to your mailing list. If you're involved in creating or updating your company's website, it's important to learn how to write a welcome message that communicates your brand identity in a concise, engaging format. In this article, we discuss the definition of a welcome message for a website and review steps, tips and examples for crafting a quality message.
-        </p>
-        
-       </section> --> -->
+      </div>
       </section>
 
 
@@ -179,15 +172,8 @@
     let raph = JSON.parse(localStorage.getItem("project"));
     console.log(raph);
     for (let r = 0; r < raph.length; r++) {
-      nam.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
       nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      fname.innerHTML = raph[r].ffname
-      lname.innerHTML = raph[r].LstName
-      gmail.innerHTML = raph[r].Email
-      phone.innerHTML = raph[r].Address
-      pass.innerHTML = raph[r].Password
-      locate.innerHTML = raph[r].Address
-
+      
 
     }
   </script>
