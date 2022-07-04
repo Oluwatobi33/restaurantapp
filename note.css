@@ -41,7 +41,7 @@ label, input, textarea{
     color: #121614;
     outline: 2px solid #121614;
 }
-[type="submit"]{
+.dis{
     background-color: #33CA7F;
     border: 3px solid transparent;
     font-size: 1.3rem;
@@ -50,7 +50,21 @@ label, input, textarea{
     cursor: pointer;
     transition: all 250ms ease-in-out;
 }
-[type="submit"]:hover{
+.dis:hover{
+    outline: none;
+    box-shadow: none;
+    border: 3px solid #121614;
+}
+.di{
+    background-color: blue;
+    border: 3px solid transparent;
+    font-size: 1.3rem;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+.di:hover{
     outline: none;
     box-shadow: none;
     border: 3px solid #121614;

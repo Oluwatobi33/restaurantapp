@@ -22,7 +22,6 @@
           <div class="">
             <div class=" ms-3 mt-2">
               <p id="nam1"></p>
-              <!-- <p id="nam2"></p> -->
             </div>
             <p class="text-success "> Online</p>
 
@@ -115,42 +114,25 @@
             <h3>Add a New Note:</h3>
             <form>
                 <label for="title">Title 
-                    <input type="text" id="title" placeholder="Enter note Title">
+                  <input type="text" id="title" placeholder="Enter note Title">
                 </label>
                 <label for="note">Note 
-                    <textarea  name="note" id="note" cols="30" rows="10" placeholder="Enter Your note here"></textarea>
+                  <textarea  name="note" id="note" cols="30" rows="10" placeholder="Enter Your note here"></textarea>
                 </label>
-                <div>
-                  <input type="submit" value="Save" onclick="save()" id="hov">
-                  <input type="submit" value="Update" style="display:none;" onclick="update()" id="upd">
-                  <!-- <button class='btn btn-primary' onclick='show()'>Display</button> -->
-                  <!-- <input type="submit" value="Display" onclick="show()"> -->
-                </div>
+                <button class='btn dis' onclick='save()' id="hov">Save</button>
+                <button class='btn dis' onclick='update()' style="display:none;" id="upd">Save</button>
+                <!-- <button class='btn di' onclick='disp()'>Display</button> -->
             </form>
         </div>
         <div class="note-container">
-            <div class="note" id="display">
-                <!-- <div class="note_btn"></div> -->
-            </div> 
+          <div class="note" id="display"></div> 
         </div>
       </section>
 
-
     </div>
-
-
 
   </section>
   <script src="./bootstrap.js"></script>
-  <!-- <script>
-    let raph = JSON.parse(localStorage.getItem("project"));
-    for (let r = 0; r < raph.length; r++) {
-      nam1.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName;
-    //   nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName;
-      nam1.innerHTML = raph[r].ffname;
-    //   nam2.innerHTML = raph[r].LstName;
-    }
-  </script> -->
   <script src="note.js"></script>
 </body>
 
