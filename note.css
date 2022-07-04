@@ -1,7 +1,5 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: grid;
-    place-items: center;
     color: #121614;
 }
 h1{

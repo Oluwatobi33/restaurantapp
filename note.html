@@ -13,7 +13,7 @@
     <title>NOTEPAD</title>
 </head>
 
-<body onload="show()">
+<body>
   <section class="text-center mx-auto row justify-content-center   ">
     <ul id="bgblue" class="sidebar-dropdown   list-unstyled col-lg-2 col-md-4  text-center">
       <li id="user" class="col-12 text-light d-flex  pt-3  ">
@@ -21,7 +21,8 @@
         <div class="">
           <div class="">
             <div class=" ms-3 mt-2">
-              <p id="nam2"></p>
+              <p id="nam1"></p>
+              <!-- <p id="nam2"></p> -->
             </div>
             <p class="text-success "> Online</p>
 
@@ -47,8 +48,7 @@
       </div>
 
       <div class="py-3">
-        <li class="btn1 col-12  py-2 "> <i class="fa fa-book text-light" aria-hidden="true"></i> <a class=""
-            href="rough.html">Document</a> </li>
+        <li class="btn1 col-12  py-2 "> <i class="fa fa-book text-light" aria-hidden="true"></i> <a class="" href="rough.html">Document</a> </li>
       </div>
 
       <div class="py-3">
@@ -109,8 +109,8 @@
       </header>
 
 
-      <section id="main" style="height: 91vh;" class=" col-12 justify-content-center">
-        <!-- <div class="form_container">
+      <section id="main" style="height: 88vh;" class=" col-12 justify-content-center">
+        <div class="form_container">
             <h1>Note taker</h1>
             <h3>Add a New Note:</h3>
             <form>
@@ -120,16 +120,19 @@
                 <label for="note">Note 
                     <textarea  name="note" id="note" cols="30" rows="10" placeholder="Enter Your note here"></textarea>
                 </label>
-                <input type="submit" onclick="save()" id="hov">
+                <div>
+                  <input type="submit" value="Save" onclick="save()" id="hov">
+                  <input type="submit" value="Update" style="display:none;" onclick="update()" id="upd">
+                  <button class='btn btn-primary' onclick='show()'>Display</button>
+                  <!-- <input type="submit" value="Display" onclick="show()"> -->
+                </div>
             </form>
         </div>
         <div class="note-container">
-            
             <div class="note" id="display">
-                <h2 class="note_title">Note list</h2>
-                <div class="note_btn" id="disp"></div>
+                <!-- <div class="note_btn"></div> -->
             </div> 
-        </div> -->
+        </div>
       </section>
 
 
@@ -139,20 +142,15 @@
 
   </section>
   <script src="./bootstrap.js"></script>
-  <script>
+  <!-- <script>
     let raph = JSON.parse(localStorage.getItem("project"));
-    console.log(raph);
     for (let r = 0; r < raph.length; r++) {
-      nam.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      fname.innerHTML = raph[r].ffname
-      lname.innerHTML = raph[r].LstName
-      gmail.innerHTML = raph[r].Email
-      phone.innerHTML = raph[r].Address
-      pass.innerHTML = raph[r].Password
-      locate.innerHTML = raph[r].Address
+      nam1.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName;
+    //   nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName;
+      nam1.innerHTML = raph[r].ffname;
+    //   nam2.innerHTML = raph[r].LstName;
     }
-  </script>
+  </script> -->
   <script src="note.js"></script>
 </body>
 
