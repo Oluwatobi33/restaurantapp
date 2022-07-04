@@ -11,15 +11,14 @@ const save = () => {
     }
     details.push(informatio)
     localStorage.member = JSON.stringify(details);
-    // location.reload()
+    location.reload()
 }
+show()
 function show() {
     let t = ""
-    let b = ""
     details = JSON.parse(localStorage.getItem("member"));
     for (let i = 0; i < details.length; i++) {
-        t += `<h2 class="note_title" id="notetitle">${details[i].ttle}</h2><p class="note_body" id="notebody">${details[i].bk}</p><button onclick='edit(${i})' class="note_btn note_view">Edit Detail</button>
-        </td><td><button onclick='remove(${i})' class="note_btn note_delete">Delete Note</button></td>` 
+        t += `<h2 class="note_title" id="notetitle">${details[i].ttle}</h2><p class="note_body" id="notebody">${details[i].bk}</p><div class="note_btn"><button onclick='edit(${i})' class="note_btn note_view">Edit Detail</button><button onclick='remove(${i})' class="note_btn note_delete">Delete Note</button></div>` 
     }
     console.log(details)
     display.innerHTML = t;
@@ -30,22 +29,22 @@ function remove(i){
     localStorage.setItem('member',JSON.stringify(detail))
     location.reload()
 }
-// var edite;
-// function edit(i){
-//     detail = JSON.parse(localStorage.getItem("member"));
-//     console.log(detail);
-//     itle.value = detail[i].ttle;
-//     bk.value = detail[i].bk;
-//     hov.style.display="none";
-//     upd.style.display="block";
-//     edite = i;
-// }
-// function update(){
-//     details = JSON.parse(localStorage.getItem("member"))
-//     details.splice(edite,1,{
-//         ttle:itle.value,
-//         bk:bk.value
-//     })
-//     localStorage.member = JSON.stringify(details)
-//     window.location.reload()
-// }
+var edite;
+function edit(i){
+    detail = JSON.parse(localStorage.getItem("member"));
+    console.log(detail);
+    itle.value = detail[i].ttle;
+    bk.value = detail[i].bk;
+    hov.style.display="none";
+    upd.style.display="block";
+    edite = i;
+}
+function update(){
+    details = JSON.parse(localStorage.getItem("member"))
+    details.splice(edite,1,{
+        ttle:itle.value,
+        bk:bk.value
+    })
+    localStorage.member = JSON.stringify(details)
+    window.location.reload()
+}
