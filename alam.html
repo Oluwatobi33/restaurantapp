@@ -36,22 +36,23 @@
 
 
       <div class="py-3 d-flex">
-        
-        <li class="btn1 col-12  ms-1 py-2 "><i class="fa fa-book col-2 text-light" aria-hidden="true"></i><a href="note.html">Notes</a> </li>
+
+        <li class="btn1 col-12  ms-3 py-2 "><i class="fa fa-book col-1 text-light" aria-hidden="true"></i><a
+            href="note.html">Notes</a> </li>
       </div>
 
       <div class="py-3">
-        <li class="btn1 col-12  ms-1 py-2 "> <i class="fa fa-clock-o text-light" aria-hidden="true"></i> <a class=""
-            href="index.html">Events</a> </li>
+        <li class="btn1 col-12  ms-3 py-2 "> <i class="fa fa-clock-o text-light" aria-hidden="true"></i> <a class=""
+            href="event.html">Events</a> </li>
       </div>
 
       <div class="py-3">
-        <li class="btn1 col-12  py-2 "> <i class="fa fa-book text-light" aria-hidden="true"></i> <a class=""
-            href="rough.html">Document</a> </li>
+        <li class="btn1 col-12 ms-3  py-2 "> <i class="fa fa-book text-light" aria-hidden="true"></i> <a class=""
+            href="document.html">Document</a> </li>
       </div>
 
       <div class="py-3">
-        <li class="btn1 col-12  ms-1 py-2 "><i class="fa fa-inbox text-light" aria-hidden="true"></i> <a class=""
+        <li class="btn1 col-12  ms-3 py-2 "><i class="fa fa-inbox text-light" aria-hidden="true"></i> <a class=""
             href="index.html">All ditails</a> </li>
       </div>
 
@@ -89,7 +90,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="alam.html">Alam</a></li>
-                    <li><a class="dropdown-item text-success" href="currentlocation.html">current location</a></li>
+                    <li><a class="dropdown-item" href="currentlocation.html">current location</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
@@ -109,59 +110,18 @@
 
 
       <section id="main" style="height: 91vh;" class=" col-12 justify-content-center">
-        <div id="pro" class="col-12 border border-5 d-flex justify-content-start">
-          <h5>Profile</h3>
-        </div>
-        <div class="main col-12  d-flex align-items-center px-5 text-center  justify-content-center ">
-
-          <div class="col-10 d-flex align-items-center p-5 text-center  justify-content-center ">
-            <div id="bodda" class="modal-body    d-flex justify-content-center  border border-3  ">
-
-              <div class=" col-4 ">
-                <img id="img" src="img/profile.PNG" alt="" height="200px">
-                <p id="nam"></p>
-                <input id="boder" class="py-2" type="file" />
-                <div>
-                  <button class="boda col-8 p-2 mb-5" onmouseover="choose()">Edit Imge</button>
-
-                  <div id="two">
-
-                  </div>
-                  <div class="d-none" id="tt">
-                    <img id="im" src="/img/profile.PNG" alt="" height="55px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
-                  </div>
-
+        <section>
+            <div class="clock">
+                <div class="container d-flex ">
+                   <h2 id="hours">00</h2> 
+                   <h2 class="dot">:</h2>
+                   <h2 id="minutes">00</h2>
+                   <h2 class="dot">:</h2>
+                   <h2 id="seconds">00</h2>
+                   <span id="ampm">AM</span>
                 </div>
-              </div>
-              <div id="size" class="col-5 ms-4 d-flex align-items-center">
-
-                <div>
-
-                  <p id="fname"></p>
-
-                  <p id="lname"></p>
-                  <p id="gmail"></p>
-                  <p id="phone"></p>
-                  <p id="gend"></p>
-                  <p id="locate"></p>
-                  <p id="pass"></p>
-                </div>
-
-
-              </div>
-
-
             </div>
-          </div>
-        </div>
-        <!-- <section  class="col-6 text-center">
-        <p>
-          Consumers access your website to learn more information about your business. A welcome message can make them feel valued and persuade them to peruse your inventory or subscribe to your mailing list. If you're involved in creating or updating your company's website, it's important to learn how to write a welcome message that communicates your brand identity in a concise, engaging format. In this article, we discuss the definition of a welcome message for a website and review steps, tips and examples for crafting a quality message.
-        </p>
-        
-       </section> --> -->
+          </section>
       </section>
 
 
@@ -178,17 +138,39 @@
     let raph = JSON.parse(localStorage.getItem("project"));
     console.log(raph);
     for (let r = 0; r < raph.length; r++) {
-      nam.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
+   
       nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      fname.innerHTML = raph[r].ffname
-      lname.innerHTML = raph[r].LstName
-      gmail.innerHTML = raph[r].Email
-      phone.innerHTML = raph[r].Address
-      pass.innerHTML = raph[r].Password
-      locate.innerHTML = raph[r].Address
-
+    
 
     }
+  </script>
+  <script>
+     var hour = document.getElementById("hours");
+    var minute = document.getElementById('minutes');
+    var second = document.getElementById('seconds');
+    var ampm = document.getElementById('ampm'); 
+    setInterval(function(){
+      var h= new Date().getHours();
+      var m = new Date().getMinutes();
+      var s = new Date().getSeconds();
+      var am='AM';
+      if (h>12){
+        h=h-12;
+        am= 'PM';
+      }
+      if(h<10){
+       h= "0"+h
+      }
+      else{
+       h= h
+      }
+      m = (m<10)? '0' + m : m;
+      s = (s<10)? '0' + s : s;
+      hour.innerHTML=h;
+      second.innerHTML=s;
+      minutes.innerHTML=m;
+      ampm.innerHTML=am;
+    } )
   </script>
 </body>
 

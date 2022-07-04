@@ -1,7 +1,5 @@
 
-body{
-  overflow: hidden;
-}
+
 #bgblue{
     background-color:#15273B;
   
@@ -20,14 +18,12 @@ body{
     color:white;
   }  
  #user{
-  /* border: solid white; */
   height: 12vh;
   margin-left: 1px;
-  background-color: #214162;
  }
  .dress{
   height: 6vh;
-  width: 60px;
+  width: 70px;
   background-color: #FF5722;
  }
   
@@ -52,7 +48,11 @@ border-radius: 40px 0 0 40px;
     }
     .navbar{
       background-color: #15283C;
+      margin-left: -8px;
 
+    }
+    #pro{
+      margin-left: -8px;
     }
     .btns{
       background-color: #FF5722;

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <title>main page</title>
+</head>
+
+<body>
+  <section class="text-center mx-auto row justify-content-center   ">
+    <ul id="bgblue" class="sidebar-dropdown  list-unstyled col-lg-2 col-md-4  text-center">
+      <li id="user" class="col-12 text-light d-flex  pt-3  ">
+        <img id="img" src="img/profile.PNG" alt="" height="60px">
+        <div class="">
+          <div class="">
+            <div class=" ms-3 mt-2">
+              <p id="nam2"></p>
+            </div>
+            <p class="text-success "> Online</p>
+
+          </div>
+      </li>
+      <hr class="text-light">
+      <li class="py-2 mt-3 ms-3  h4 text-light">General </li>
+      <hr class="text-light">
+      <div class="py-3">
+        <li class="btn1 col-12  ms-3 py-2 "> <i class="fa fa-user-circle text-light" aria-hidden="true"></i> <a class=""
+            href="index.html">Profile</a> </li>
+      </div>
+
+
+      <div class="py-3 d-flex">
+
+        <li class="btn1 col-12 ms-3  py-2 "><i class="fa fa-book col-1 text-light" aria-hidden="true"></i><a
+            href="note.html">Notes</a> </li>
+      </div>
+
+      <div class="py-3">
+        <li class="btn1 col-12  ms-3 py-2 "> <i class="fa fa-clock-o text-light" aria-hidden="true"></i> <a class=""
+            href="event.html">Events</a> </li>
+      </div>
+
+      <div class="py-3">
+        <li class="btn1 col-12 ms-3  py-2 "> <i class="fa fa-book text-light" aria-hidden="true"></i> <a class=""
+            href="document.html">Document</a> </li>
+      </div>
+
+      <div class="py-3">
+        <li class="btn1 col-12  ms-3 py-2 "><i class="fa fa-inbox text-light" aria-hidden="true"></i> <a class=""
+            href="index.html">All ditails</a> </li>
+      </div>
+
+
+      <div class="py-3">
+        <li class="btn1 col-12 ms-3  py-2 "> <i class="fa fa-gear text-light" aria-hidden="true"></i> <a class=""
+            href="index.html">Settings</a> </li>
+      </div>
+    </ul>
+    <div class="  bg-light col-lg-10 col-md-8 col-sm-12">
+      <header class="">
+
+        <nav class="navbar navbar-expand-lg   navbar-dark ">
+          <div class="dress col-1 ms-1"><i class="fa fa-inbox fs-1 text-light" aria-hidden="true"></i></div>
+          <div class="container-fluid">
+            <h4 class="nav">Gitpro</h4>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ms-4">
+                  <a class="nav-link  nav" href="sign-in.html">sign in</a>
+                </li>
+                <li class="nav-item ms-4">
+                  <a class="nav-link   " href="Edit.html">Edit</a>
+                </li>
+
+                <li class="nav-item dropdown ms-5">
+                  <a class="nav-link dropdown-toggle nav" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Others
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="alam.html">Alam</a></li>
+                    <li><a class="dropdown-item" href="currentlocation.html">current location</a></li>
+                  
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success text-light btns" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+      <section id="main" style="height: 95vh;" class="col-12  justify-content-center">
+        <div id="wow" class="  mx-auto">
+          <div id="ok" class="  ">
+          <table  class="table table-bordered shadow my-3 text-center">
+              <thead class="h5">
+                  <tr>
+                      
+                      <td id="td">FIRSTNAME</td>
+                      <td id="td">LASTNAME</td>
+                      <td id="td">EMAIL</td>
+                      <td id="td">PHONE</td>
+                      <td id="td">GENDER</td>
+                      <td id="td">PASSWORD</td>
+                      <td id="td">location</td>
+                      <td colspan="2">Action</td>
+                  </tr>
+              </thead>
+              
+                  <tbody id="file" class="h-25"></tbody>
+              </div>
+          </table> 
+         </div>
+         
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit page</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <input type="text" class='form-control'id='firame'>
+           <input type="text"class='form-control'id='lasame'>
+           <input type="text"class='form-control'id='gmail'>
+           <input type="text"class='form-control' id="genda">
+           <input type="text"class='form-control' id="loca">
+           <input type="text"class='form-control' id="phonum">
+           <input type="text"class='form-control'id='PASSWORD'>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" onclick="updat()" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      </section>
+
+
+    </div>
+
+
+
+  </section>
+
+
+  <script src="./bootstrap.js"></script>
+  <script>
+    let raph = JSON.parse(localStorage.getItem("project"));
+    for(let r = 0; r < raph.length; r++){
+      nam2.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
+      }
+var edite;
+          var f ='';
+          let rap = JSON.parse(localStorage.getItem("project"));
+        for(i=0;i<rap.length;i++){
+          f= "<tr>"+"<td>"+rap[i].ffname+"</td><td>"+rap[i].LstName+"</td><td>"+rap[i].Email+"</td><td>"+rap[i].phone +"</td><td>" +rap[i].Gender+ "</td><td>" +rap[i].Password+"</td><td>"+rap[i].Address +"</td>  <td><button class='btn btn-danger' onclick='del("+i+")'>Delete</button></td><td><button class='btn btn-success'onclick='edit("+i+")'data-bs-toggle='modal' data-bs-target='#exampleModal'>Edit</button></td></tr>";
+          console.log(rap[i]);
+          document.getElementById("file").innerHTML = f;
+      } 
+      function del(i){
+         var conf= confirm("Are You Sure You Want To Delete")
+          if(conf){
+             customers=JSON.parse(localStorage.getItem("project")) 
+             customers.splice(i,1)
+             localStorage.setItem("project",JSON.stringify(customers))
+             location.reload()
+          }
+      }
+      function edit(i){
+          customers =JSON.parse(localStorage.getItem("project"))
+          firame.value=customers[i].ffname;
+          lasame.value=customers[i].LstName;
+          gmail.value=customers[i].Email;
+          genda.value=customers[i].Gender;
+          phonum.value=customers[i].phone;
+          loca.value=customers[i].Address;
+          PASSWORD.value=customers[i].password;
+          var edite=i;
+      }
+      function updat(i){
+        custom =JSON.parse(localStorage.getItem("project"))
+        custom.splice(edite,1,{
+            ffname:firame.value,
+            lstName:lasame.value,
+            Email:gmail.value,
+            Gender:genda.value,
+            Address:loca.value,
+            phone:phonum.value,
+            password:PASSWORD.value,
+        })
+        localStorage.setItem("project",JSON.stringify(custom))
+        location.reload("Edit.html")
+      }
+  </script>
+</body>
+
+</html>
