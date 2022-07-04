@@ -19,6 +19,13 @@
             padding: 5px 0;
         }
 
+        .nn {
+            border: 1px solid black;
+            margin: 12px 0;
+            height: 12px;
+            border: none;
+        }
+
         .wid {
             width: 65%;
             border-radius: 40px;
@@ -41,11 +48,10 @@
 </head>
 
 <body class="bg-dark">
-
     <div class="container py-5">
-
         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">SIGN-IN</button>
+            data-bs-target="#exampleModal">SIGN-IN
+        </button>
         <div class="modal fade" id="exampleModal">
             <div class="modal-dialog">
                 <div class="modal-content widt">
@@ -56,12 +62,11 @@
                         <div class="container px-2 bos">
                             <h2 class="text-center" style="color: rgb(25, 25, 87);"><i>SIGN-IN</i></h2>
                             <div>
-                                <input type="email" class="form-control border rounded my-3"
-                                    placeholder="Your Email address" id="email">
-                                    <small id="ppm" class="ps-3"></small>
-                                <input type="password" class="form-control border rounded my-2"
-                                    placeholder="Your password" id="password">
-                                    <small id="ppp" class="ps-3"></small>
+                                <input type="email" id="em" class="form-control border rounded my-3" placeholder="Your Email address">
+                                <small id="e1" class="ps-3"></small>
+                                <input type="password"  id="pss" class="form-control border rounded my-2"
+                                    placeholder="Your password">
+                                <small id="e2" class="ps-3"></small>
                                 <div class="py-2" style="color: rgb(25, 25, 87);">
                                     <input type="checkbox">Remember me
                                     <a href="#" onclick=""
@@ -97,7 +102,7 @@
                                 </div>
                                 <center class="pt-3">
                                     <button type="submit" class="btn btn-primary col-5"
-                                        onclick="SIGNIN()">SIGN-IN</button>
+                                        onclick="login()">SIGN-IN</button>
                                 </center>
                             </div>
                         </div>
@@ -108,23 +113,23 @@
     </div>
 
     <script>
-        function login(){
-            mail = email.value;
+        function login() {
+            mail = em.value;
             pass = pss.value;
             tobi = JSON.parse(localStorage.getItem("project"));
-            for (i = 0; i<tobi.length; i++) {
-                // if(mail == tobi[i].Email&&pass == tobi[i].Password){
-                //     window.location.href = "rapheal.html";
-                //     e1.innerHTML = "";
-                //     e2.innerHTML = "";   
-                // }
-                if(mail !== tobi[i].Email&&pass !== tobi[i].Password ){
+            for (i = 0; i < tobi.length; i++) {
+                if(mail == tobi[i].Email&&pass == tobi[i].Password){
+                    window.location.href = "rapheal.html";
+                    e1.innerHTML = "";
+                    e2.innerHTML = "";   
+                }
+                if (mail !== tobi[i].Email && pass !== tobi[i].Password) {
                     e1.innerHTML = 'Enter the value of the email';
                     e1.style.color = "red";
                     e2.innerHTML = "Enter the value of the password";
-                    e2.style.color = "red";  
-                }  
-            }  
+                    e2.style.color = "red";
+                }
+            }
             console.log(tobi);
         }
         const Update = () => {
