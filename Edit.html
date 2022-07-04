@@ -197,7 +197,7 @@ var edite;
           lasame.value=customers[i].LstName;
           gmail.value=customers[i].Email;
           genda.value=customers[i].Gender;
-          phonum.value=customers[i].phone;
+          phonum.value=customers[i].PhoneNumber;
           loca.value=customers[i].Address;
           PASSWORD.value=customers[i].password;
           var edite=i;
@@ -210,7 +210,7 @@ var edite;
             Email:gmail.value,
             Gender:genda.value,
             Address:loca.value,
-            phone:phonum.value,
+            PhoneNumber:phonum.value,
             password:PASSWORD.value,
         })
         localStorage.setItem("project",JSON.stringify(custom))
