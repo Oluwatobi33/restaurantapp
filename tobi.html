@@ -17,7 +17,7 @@
           display: flex;
           flex-direction: column;
           width: 55vh;
-          height: 75vh !important;
+          height: 87vh !important;
           pointer-events: auto;
           background-color: #fff;
           background-clip: padding-box;
@@ -27,7 +27,7 @@
         }
         @media screen and (max-width:414px){
           .moback{
-            height: 97vh !important;
+            height: 107vh !important;
             width: 52vh !important;
           }
           #out{
@@ -47,8 +47,8 @@
         }
         .dd {
           border: 1px solid black;
-          margin: 9px 0;
-          height: 5px;
+          margin: 12px 0;
+          height: 8px;
           border: none;
         }
   </style>
@@ -97,9 +97,13 @@
                       <option  value="1">Male</option>
                       <option  value="2">Female</option>
                     </select>
-                  <div class=" inline mt-3">
-                    <a href="sign-in.html" class="text-decoration-none"><button type="submit" class="btn btn-primary ">Sign in</button></a>
-                    <button type="submit" class="btn btn-primary" onclick="show()" style="position: relative; left: 73px;">Sign up</button>
+                  <div class="row mt-3">
+                    <div class="col-6">
+                      <a href="sign-in.html" class="text-decoration-none btn btn-primary">Sign in</a>
+                    </div>
+                    <div class="col-6">
+                      <a  class="btn btn-primary" onclick="show()">Sign up</a>
+                    </div>
                   </div>
                 </div>
               </div>
