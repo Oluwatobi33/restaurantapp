@@ -49,8 +49,7 @@
 
 <body class="bg-dark">
     <div class="container py-5">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">SIGN-IN
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">SIGN-IN
         </button>
         <div class="modal fade" id="exampleModal">
             <div class="modal-dialog">
@@ -62,9 +61,10 @@
                         <div class="container px-2 bos">
                             <h2 class="text-center" style="color: rgb(25, 25, 87);"><i>SIGN-IN</i></h2>
                             <div>
-                                <input type="email" id="em" class="form-control border rounded my-3" placeholder="Your Email address">
+                                <input type="email" id="em" class="form-control border rounded my-3"
+                                    placeholder="Your Email address">
                                 <small id="e1" class="ps-3"></small>
-                                <input type="password"  id="pss" class="form-control border rounded my-2"
+                                <input type="password" id="pss" class="form-control border rounded my-2"
                                     placeholder="Your password">
                                 <small id="e2" class="ps-3"></small>
                                 <div class="py-2" style="color: rgb(25, 25, 87);">
@@ -118,10 +118,10 @@
             pass = pss.value;
             tobi = JSON.parse(localStorage.getItem("project"));
             for (i = 0; i < tobi.length; i++) {
-                if(mail == tobi[i].Email&&pass == tobi[i].Password){
+                if (mail == tobi[i].Email && pass == tobi[i].Password) {
                     window.location.href = "raph.html";
                     e1.innerHTML = "";
-                    e2.innerHTML = "";   
+                    e2.innerHTML = "";
                 }
                 if (mail !== tobi[i].Email && pass !== tobi[i].Password) {
                     e1.innerHTML = 'Enter the value of the email';
