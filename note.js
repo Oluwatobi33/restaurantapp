@@ -1,41 +1,50 @@
-let raph = JSON.parse(localStorage.getItem("project"));
-    console.log(raph);
-    for(let r = 0; r < raph.length; r++){
-      nam.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
-      nam2.innerHTML =raph[r].Frname + '  ' +'  '+  raph[r].LstName
-      fname.innerHTML =raph[r].Frname
-      lname.innerHTML=raph[r].LstName
-      gmail.innerHTML=raph[r].Email
-      phone.innerHTML=raph[r].Address
-      pass.innerHTML=raph[r].Password
-}
-
+disp()
 details = [];
 const save = () => {
-    if (localStorage.member) {
-        details = JSON.parse(localStorage.member)
+    if (localStorage.project) {
+        details = JSON.parse(localStorage.project)
     }
-    var userTitle = title.value;
-    var userNote = note.value;
+    var hod = title.value;
+    var uk = note.value;
     informatio = {
-        title:userTitle,
-        note:userNote,
+        ttle:hod,
+        bk:uk,
     }
     details.push(informatio)
-    localStorage.member = JSON.stringify(details);
+    localStorage.project = JSON.stringify(details);
     location.reload()
 }
-function show() {
-    details = JSON.parse(localStorage.getItem("member"));
+function disp() {
     let t = ""
-    // let b = ""
+    details = JSON.parse(localStorage.getItem("project"));
     for (let i = 0; i < details.length; i++) {
-        t += `<h2 class="note_title" id="notetitle">${details[i].title}</h2>`
-        t += `<p class="note_body" id="notebody">${details[i].note}</p>`
-        t += `<button class="note_btn note_view">View Detail</button>
-        </td><td><button class="note_btn note_delete">Delete Note</button></td>` 
-        console.log(details[i])
+        t += `<h2 class="note_title" id="notetitle">${details[i].ttle}</h2><p class="note_body" id="notebody">${details[i].bk}</p><div class="note_btn"><button onclick='edit(${i})' class="note_btn note_view">Edit Detail</button><button onclick='remove(${i})' class="note_btn note_delete">Delete Note</button></div>` 
     }
+    console.log(details)
     display.innerHTML = t;
-    // disp.innerHTML = b;
+}
+function remove(i){
+    detail = JSON.parse(localStorage.getItem("project"));
+    detail.splice(i,1)
+    localStorage.setItem('project',JSON.stringify(detail))
+    location.reload()
+}
+var edite;
+function edit(i){
+    detail = JSON.parse(localStorage.getItem("project"));
+    console.log(detail);
+    title.value = detail[i].ttle;
+    note.value = detail[i].bk;
+    hov.style.display="none";
+    upd.style.display="block";
+    edite = i;
+}
+function update(){
+    details = JSON.parse(localStorage.getItem("project"))
+    details.splice(edite,1,{
+        ttle:title.value,
+        bk:note.value,
+    })
+    localStorage.project = JSON.stringify(details)
+    location.reload()
 }
