@@ -21,7 +21,7 @@
         <div class="">
           <div class="">
             <div class=" ms-3 mt-2">
-              <p id="nam1"></p>
+              <p id="nam"></p>
             </div>
             <p class="text-success "> Online</p>
 
@@ -134,6 +134,16 @@
   </section>
   <script src="./bootstrap.js"></script>
   <script src="note.js"></script>
+  <script>
+    if(localStorage.project){
+      let raph = JSON.parse(localStorage.getItem("project"));
+      console.log(raph);
+      for(let r = 0; r < raph.length; r++){
+        nam.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
+        // location.innerHTML = raph[r].Address
+      }
+    }
+  </script>
 </body>
 
 </html>
