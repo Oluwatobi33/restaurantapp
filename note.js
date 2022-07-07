@@ -11,13 +11,14 @@ const save = () => {
     }
     var hod = title.value;
     var uk = note.value;
-    informatio = {
+    informatio = {  
         ttle:hod,
         bk:uk,
     }
     details.push(informatio)
     localStorage.member = JSON.stringify(details);
-    location.reload()
+    title.value=''
+    note.value='';
 }
 function disp() {
     let t = ""
