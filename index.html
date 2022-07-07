@@ -6,189 +6,151 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./bootstrap.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <title>main page</title>
+  <link rel="stylesheet" href="style.css">
+  <title>SIGN UP PAGE</title>
+  <style>
+     .form-control{
+            box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
+        }
+        .moback {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 55vh;
+          height: 87vh !important;
+          pointer-events: auto;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 1.9rem;
+          outline: 0;
+        }
+        @media screen and (max-width:414px){
+          .moback{
+            height: 107vh !important;
+            width: 52vh !important;
+          }
+          #out{
+            height: 94vh !important;
+          }
+        }
+        .modal-body {
+          margin-top: -65px;
+        }
+        /* .mm {
+          border-radius: 20px !important;
+          box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
+          height: 75vh !important;
+        } */
+        .okay {
+            border-radius: 53px;
+        }
+        .dd {
+          border: 1px solid black;
+          margin: 9px 0;
+          height: 14px;
+          border: none;
+        }
+  </style>
 </head>
 
-<body>
-  <section class="text-center mx-auto row justify-content-center   ">
-    <ul id="bgblue" class="sidebar-dropdown   list-unstyled col-lg-2 col-md-4  text-center">
-      <li id="user" class="col-12 text-light d-flex  pt-3  ">
-        <img id="img" src="img/profile.PNG" alt="" height="60px">
-        <div class="">
-          <div class="">
-            <div class=" ms-3 mt-2">
-              <p id="nam2"></p>
-            </div>
-            <p class="text-success "> Online</p>
-
-          </div>
-      </li>
-      <hr class="text-light">
-      <li class="py-2 mt-3 ms-3  h4 text-light">General </li>
-      <hr class="text-light">
-      <div class="py-3">
-        <li class="btn1 col-12  ms-3 py-2 "> <i class="fa fa-user-circle text-light" aria-hidden="true"></i> <a class=""
-            href="index.html">Profile</a> </li>
-      </div>
-
-
-      <div class="py-3 d-flex">
-
-        <li class="btn1 col-12  ms-3 py-2 "><i class="fa fa-book col-1 text-light" aria-hidden="true"></i><a
-            href="note.html">Notes</a> </li>
-      </div>
-
-      <div class="py-3">
-        <li class="btn1 col-12  ms-3 py-2 "> <i class="fa fa-clock-o text-light" aria-hidden="true"></i> <a class=""
-            href="event.html">Events</a> </li>
-      </div>
-
-      <div class="py-3">
-        <li class="btn1 col-12 ms-3  py-2 "> <i class="fa fa-book text-light" aria-hidden="true"></i> <a class=""
-            href="document.html">Document</a> </li>
-      </div>
-
-      <div class="py-3">
-        <li class="btn1 col-12  ms-3 py-2 "><i class="fa fa-inbox text-light" aria-hidden="true"></i> <a class=""
-            href="index.html">All ditails</a> </li>
-      </div>
-
-
-      <div class="py-3">
-        <li class="btn1 col-12 ms-3  py-2 "> <i class="fa fa-gear text-light" aria-hidden="true"></i> <a class=""
-            href="index.html">Settings</a> </li>
-      </div>
-    </ul>
-    <div class="  bg-light col-lg-10 col-md-8 col-sm-12 ">
-      <header class=" ">
-
-        <nav class="navbar navbar-expand-lg col-12  navbar-dark ">
-          <div class="dress col-1 ms-1"><i class="fa fa-inbox fs-1 text-light" aria-hidden="true"></i></div>
-          <div class="container-fluid">
-            <h4 class="nav">Gitpro</h4>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item ms-4">
-                  <a class="nav-link  nav" href="sign-in.html">sign in</a>
-                </li>
-                <li class="nav-item ms-4">
-                  <a class="nav-link   " href="Edit.html">Edit</a>
-                </li>
-
-                <li class="nav-item dropdown ms-5">
-                  <a class="nav-link dropdown-toggle nav" href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Others
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="alam.html">Alam</a></li>
-                    <li><a class="dropdown-item text-success" href="currentlocation.html">current location</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-
-              </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success text-light btns" type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-
-      <section id="main" style="height: 91vh;" class=" col-12 justify-content-center">
-        <div id="pro" class="col-12 border border-5 d-flex justify-content-start">
-          <h5>Profile</h3>
-        </div>
-        <div class="main col-12  d-flex align-items-center px-5 text-center  justify-content-center ">
-
-          <div class="col-10 d-flex align-items-center p-5 text-center  justify-content-center ">
-            <div id="bodda" class="modal-body    d-flex justify-content-center  border border-3  ">
-
-              <div class=" col-4 ">
-                <img id="img" src="img/profile.PNG" alt="" height="200px">
-                <p id="nam"></p>
-                <input id="boder" class="py-2" type="file" />
-                <div>
-                  <button class="boda col-8 p-2 mb-5" onmouseover="choose()">Edit Imge</button>
-
-                  <div id="two">
-
+<body  class="bg-dark">
+  <!-- Button trigger modal -->
+  <div class="container" style="height: 50vh;">
+    
+    
+    <!-- Modal -->
+    <div class="" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="moback">
+          <div class="modal-body">
+            <div class="container mt-2 ">
+              <div class="row  justify-content-center mt-5">
+                <div id="out" class="col-md-12  form-group px-4  rounded rounded-5">
+                  <h1 class=" fw-bold text-center text-uppercase text-dark mt-4" style="font-size:19px ;">Registration page</h1>
+                  <input type="text" class="form-control" value="" id="fname" placeholder="FirstName">
+                   <div class="dd">
+                    <small id="err1" class=""></small>
+                   </div>          
+                  <input type="text" class="form-control" value="" id="lname" placeholder="LastName">
+                  <div class="dd">
+                    <small id="err2" class=""></small>
                   </div>
-                  <div class="d-none" id="tt">
-                    <img id="im" src="/img/profile.PNG" alt="" height="55px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
-                    <img id="im" src="/img/profile.PNG" alt="" height="50px">
+                  <input type="text" class="form-control" value="" id="add" placeholder="Address">
+                  <div class="dd">
+                    <small id="err3" class=""></small>
                   </div>
-
+                  <input type="text" class="form-control" value="" id="email" placeholder="Email">
+                  <div class="dd">
+                    <small id="err4" class=""></small>
+                  </div>
+                  <input type="text" class="form-control" value="" id="pwd" placeholder="Password">
+                  <div class="dd">
+                    <small id="err5" class=""></small>
+                  </div>
+                  <input type="tel" class="form-control" value="" id="pass" placeholder="Phone-number">
+                  <div class="dd">
+                    <small id="err6" class=""></small>
+                  </div>
+                    <select class="form-control" id="gen">
+                      <option value="">Choose Gender</option>
+                      <option  value="1">Male</option>
+                      <option  value="2">Female</option>
+                    </select>
+                      <small class="text-dark mx-2 mt-3"> ALREADY SIGN IN</small><a href="sign-in.html" class="text-danger">sign-in?</a>
+                      <a  class="btn btn-primary mt-3" onclick="show()" style="margin-left: 43px;" >Sign up</a>
+                  </div>
                 </div>
               </div>
-              <div id="size" class="col-5 ms-4 d-flex align-items-center">
-
-                <div>
-
-                  <p id="fname"></p>
-
-                  <p id="lname"></p>
-                  <p id="gmail"></p>
-                  <p id="phone"></p>
-                  <p id="gend"></p>
-                  <p id="locate"></p>
-                  <p id="pass"></p>
-                </div>
-
-
-              </div>
-
-
             </div>
           </div>
         </div>
-        <!-- <section  class="col-6 text-center">
-        <p>
-          Consumers access your website to learn more information about your business. A welcome message can make them feel valued and persuade them to peruse your inventory or subscribe to your mailing list. If you're involved in creating or updating your company's website, it's important to learn how to write a welcome message that communicates your brand identity in a concise, engaging format. In this article, we discuss the definition of a welcome message for a website and review steps, tips and examples for crafting a quality message.
-        </p>
-        
-       </section> -->
-      </section>
-
-
+      </div>
     </div>
-
-
-
-  </section>
-
-
-
-  <script src="./bootstrap.js"></script>
-  <script>
-    let raph = JSON.parse(localStorage.getItem("project"));
-    console.log(raph);
-    for (let r = 0; r < raph.length; r++) {
-      nam.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      nam2.innerHTML = raph[r].ffname + '  ' + '  ' + raph[r].LstName
-      fname.innerHTML = raph[r].ffname
-      lname.innerHTML = raph[r].LstName
-      gmail.innerHTML = raph[r].Email
-      phone.innerHTML = raph[r].PhoneNumber
-      pass.innerHTML = raph[r].Password
-      locate.innerHTML = raph[r].Address
-    }
-  </script>
+    <script>
+        var together = []
+        function show(){
+          if(localStorage.project){
+            together = JSON.parse(localStorage.project)
+          } 
+          let gd = document.getElementById('gen');
+          let gd2 = gd.options[gd.selectedIndex].text;
+          let rush = {
+            ffname:fname.value,
+            LstName:lname.value,
+            Address:add.value,
+            Email:email.value,
+            Password:pwd.value,
+            PhoneNumber:pass.value,
+            Gender:gd2
+          }
+          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || pass.value == "" || gd2 == ""){
+            err1.innerHTML = "Enter the value of the firstname"
+            err1.style.color = "red";
+            err2.innerHTML = "Enter the value of the Lastname"
+            err2.style.color = "red";
+            err3.innerHTML = "Enter the value of the address"
+            err3.style.color = "red";
+            err4.innerHTML = "Enter the value of the email"
+            err4.style.color = "red";
+            err5.innerHTML = "Enter the value of the password"
+            err5.style.color = "red";
+            err6.innerHTML = "Enter the value of the phoneNumber"
+            err6.style.color = "red";
+            err6.innerHTML = "Enter the value of the gender"
+            err6.style.color = "red";
+          }
+          else {
+            together.push(rush)
+            localStorage.project = JSON.stringify(together)
+            console.log(together)
+            location.assign("sign-in.html")
+          }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="./bootstrap.js"></script>
 </body>
 
 </html>
