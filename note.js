@@ -4,6 +4,7 @@ if(localStorage.member){
 else{
     details=[];
 }
+localStorage.member = JSON.stringify(details);
 details = [];
 const save = () => {
     if (localStorage.member) {
@@ -19,12 +20,14 @@ const save = () => {
     localStorage.member = JSON.stringify(details);
     title.value=''
     note.value='';
+    location.reload()
 }
 function disp() {
     let t = ""
     details = JSON.parse(localStorage.getItem("member"));
     for (let i = 0; i < details.length; i++) {
-        t += `<h2 class="note_title" id="notetitle">${details[i].ttle}</h2><p class="note_body" id="notebody">${details[i].bk}</p><div class="note_btn"><button onclick='edit(${i})' class="note_btn note_view">Edit Detail</button><button onclick='remove(${i})' class="note_btn note_delete">Delete Note</button></div>` 
+        t += `<h2 class="note_title" id="notetitle">${details[i].ttle}</h2><p class="note_body" id="notebody">${details[i].bk}</p><div class="note_btn">
+        <button class="note_btn note_view" onclick='edit(${i})' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit Detail</button><button onclick='remove(${i})' class="note_btn note_delete">Delete Note</button></div>` 
     }
     console.log(details)
     display.innerHTML = t;
