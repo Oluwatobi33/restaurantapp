@@ -29,14 +29,13 @@
     }
 
     @media screen and (max-width:414px) {
-      .moback {
-        height: 98vh !important;
-        width: 52vh !important;
+      .nice {
+        height: 38vh !important;
+        margin-top: -93px !important;
+       
       }
 
-      #out {
-        height: 94vh !important;
-      }
+     
     }
 
     .modal-body {
@@ -47,27 +46,14 @@
       padding: 13px 19px;
       margin-top: 24px;
     }
-    /* .mm {
-          border-radius: 20px !important;
-          box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
-          height: 75vh !important;
-        } */
     .okay {
       border-radius: 53px;
     }
-
     .dd {
       border: 1px solid black;
-      margin: 9px 0;
+      /* margin: 9px 0; */
       height: 14px;
       border: none;
-    }
-
-    .transparent {
-      /* background: rgba(255, 255, 255, 0.06); */
-      /* background-color: #15273B; */
-      /* background-color: #15273B; */
-    
     }
     .now {
       background-color: #15273B;
@@ -102,12 +88,12 @@
           <div class="row">
               <div class="col-md-6">
                 <select class="form-control" id="gen">
-                  <option value="1">Choose Gender</option>
+                   <small value="1">Choose Gender</small> 
                   <option value="2">Male</option>
                   <option value="3">Female</option>
                 </select>
                 <div class="dd">
-                  <small id="err7" class=""></small>
+                  <small id="err7"></small>
                 </div>
               </div>
               <div class="col-md-6">
@@ -150,7 +136,7 @@
       </div>
     </div>
   </div>
-  <script>
+  <script type="text/javascript">
     var together = []
     function show() {
       if (localStorage.project) {
@@ -158,7 +144,7 @@
       }
       let gd = document.getElementById('gen');
       let gd2 = gd.options[gd.selectedIndex].text;
-      let rush = {
+      var rush = {
         ffname: fname.value,
         LstName: lname.value,
         Address: add.value,
@@ -167,32 +153,75 @@
         PhoneNumber: pass.value,
         Gender: gd2,
         contact: [],
+        note:[],
         event: []
+      }
+      if(fname.value == ""){
+        err1.innerHTML = "Enter the value firstname"
+        err1.style.color = "red"
+      }
+      if(lname.value == ""){
+        err2.innerHTML = "Enter the value lastname"
+        err2.style.color = "red"
+        
+      }
+      if(add.value == ""){
+        err3.innerHTML = "Enter the value address"
+        err3.style.color = "red"
+      }
+      if(email.value == ""){
+        err4.innerHTML = "Enter the value email"
+        err4.style.color = "red"
+      }
+      if(pwd.value == ""){
+        err5.innerHTML = "Enter the value address"
+        err5.style.color = "red"
+      }
+      if(pass.value == ""){
+        err6.innerHTML = "Enter the value address"
+        err6.style.color = "red"
+      }
+      if(gd2.value == ""){
+        err7.innerHTML = "Enter the value address"
+        err7.style.color = "red"
+      }
+      else if (fname.value !== "") {
+        err1.innerHTML = "successfull";
+        err1.style.color = "green";
 
       }
-      if (fname.value == "" || lname.value == "" || add.value == "" || email.value == "" || pwd.value == "" || pass.value == "" || gd2 == ""){
-        err1.innerHTML = "Enter the value of the firstname"
-        err1.style.color = "red";
-        err2.innerHTML = "Enter the value of the Lastname"
-        err2.style.color = "red";
-        err3.innerHTML = "Enter the value of the address"
-        err3.style.color = "red";
-        err4.innerHTML = "Enter the value of the email"
-        err4.style.color = "red";
-        err5.innerHTML = "Enter the value of the password"
-        err5.style.color = "red";
-        err6.innerHTML = "Enter the value of the phoneNumber"
-        err6.style.color = "red";
-        err7.innerHTML = "Enter the value of the gender"
-        err7.style.color = "red";
+      else if(lname.value !== ""){
+          err2.innerHTML = "successfull";
+          err2.style.color = "green";
       }
-      else {
+      else if (add.value !== ""){
+        err3.innerHTML = "successfull";
+        err3.style.color = "green";
+      }
+      else if (email.value !== ""){
+        err4.innerHTML = "successfull"
+        err4.innerHTML = "green";
+      }
+      else if(pwd.value !== ""){
+        err5.innerHTML = "successfull";
+        err5.style.color = "green";
+      }
+      else if (pass.value !== ""){
+        err6.innerHTML = "successfull";
+        err6.style.color = "green";
+      }
+      else if(gd2.value !== ""){
+        err7.innerHTML = "successfull";
+        err7.style.color = "green";
+      }
+       
         together.push(rush)
         localStorage.project = JSON.stringify(together)
         console.log(together)
         location.assign("sign-in.html")
-      }
+      
     }
+    
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
