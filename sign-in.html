@@ -89,10 +89,10 @@
     <script type="text/javascript">
         function login() {
             tobi = JSON.parse(localStorage.getItem("project"));
-            if (em.value != "" && pss.value != "") {
+            if (email.value != "" && pwd.value != "") {
                 for(const a of tobi){
-                    if (a["Email"] == em.value && a["Password"] == pss.value) {
-                        localStorage.Email = JSON.stringify(em.value);
+                    if (a["Email"] == email.value && a["Password"] == pwd.value) {
+                        localStorage.Email = JSON.stringify(email.value);
                         location.assign("raph.html");
                     }else{
                         e1.innerHTML = "Enter the correct email"
@@ -107,8 +107,8 @@
                 e2.innerHTML = "Enter your password"
                 e2.style.color = "red";
             }
-            em.value = "";
-            pss.value = "";
+            email.value = "";
+            pwd.value = "";
             // console.log(tobi);
         }
     </script>
