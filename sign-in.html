@@ -73,34 +73,7 @@
                                     placeholder="Your password"><small id="e2"></small>
                                 <div class="py-2" style="color: rgb(25, 25, 87);">
                                     <input type="checkbox">Remember me
-                                    <a href="#" onclick="" class="for"><span type="button" data-bs-toggle="modal"
-                                            data-bs-target="#examModal">Forget password?</span>
-                                        <div class="modal" id="examModal">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content wid">
-                                                    <div class="modal-body">
-                                                        <div class="container px-2 bos">
-                                                            <div>
-                                                                <input type="email"
-                                                                    class="form-control border-bottom rounded my-3"
-                                                                    placeholder="Your Email address" id="email">
-                                                                <input type="password"
-                                                                    class="form-control border rounded my-3"
-                                                                    placeholder="Your password" id="password">
-                                                                <input type="password"
-                                                                    class="form-control border rounded my-3"
-                                                                    placeholder="Your confirm password" id="cpassword">
-                                                                <center class="pt-3">
-                                                                    <button type="submit" class="btn btn-primary col-10"
-                                                                        onclick="Update()">Reset password</button>
-                                                                </center>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
+                                    <!-- <a href="#" onclick="" class="for"><span type="button" data-bs-toggle="modal" data-bs-target="#examModal">Forget password?</span></a> -->
                                 </div>
                                 <center class="pt-3">
                                     <button type="submit" class="btn btn-primary col-5"
@@ -113,6 +86,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <script type="text/javascript">
         var second = [];
         function tope(){
@@ -170,6 +144,33 @@
             //     }
             //     location.assign("raph.html")
             // }
+=======
+
+    <script>
+        function login() {
+            tobi = JSON.parse(localStorage.getItem("project"));
+            if (em.value != "" && pss.value != "") {
+                for(const a of tobi){
+                    if (a["Email"] == em.value && a["Password"] == pss.value) {
+                        localStorage.Email = JSON.stringify(em.value);
+                        location.assign("raph.html");
+                    }else{
+                        e1.innerHTML = "Enter the correct email"
+                        e1.style.color = "red";
+                        e2.innerHTML = "Enter the correct password"
+                        e2.style.color = "red";
+                    }
+                }
+            }else{
+                e1.innerHTML = "Enter your email"
+                e1.style.color = "red";
+                e2.innerHTML = "Enter your password"
+                e2.style.color = "red";
+            }
+            em.value = "";
+            pss.value = "";
+            // console.log(tobi);
+>>>>>>> 56dbf7bf8ed2282cd36c6d0fd18e53d20d7f29c7
         }
     </script>
     <script src="./bootstrap.js"></script>
