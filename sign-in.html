@@ -30,7 +30,8 @@
             border-radius: 20px;
             margin-left: 350px;
         }
-        .for{
+
+        .for {
             text-decoration: none;
             color: rgb(25, 25, 87);
             padding-left: 200px;
@@ -47,7 +48,8 @@
                 border-radius: 20px;
                 margin-left: 50px;
             }
-            .for{
+
+            .for {
                 text-decoration: none;
                 color: rgb(25, 25, 87);
                 padding-left: 150px;
@@ -56,7 +58,7 @@
     </style>
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark" onload="tope()">
     <div class="container py-5">
         <div class="" id="exampleModal">
             <div class="modal-dialog">
@@ -65,12 +67,15 @@
                         <div class="container px-2 bos">
                             <h2 class="text-center" style="color: rgb(25, 25, 87);"><i>SIGN-IN</i></h2>
                             <div>
-                                <input type="email" id="em" class="form-control border rounded my-4" placeholder="Your Email address"><small id="e1"></small>
-                                <input type="password"  id="pss" class="form-control border rounded my-3" placeholder="Your password"><small id="e2"></small>
+                                <input type="email" id="email" class="form-control border rounded my-4"
+                                    placeholder="Your Email address"><small id="e1"></small>
+                                <input type="password" id="pwd" class="form-control border rounded my-3"
+                                    placeholder="Your password"><small id="e2"></small>
                                 <div class="py-2" style="color: rgb(25, 25, 87);">
                                     <input type="checkbox">Remember me
-                                    <a href="#" onclick="" class="for"><span type="button" data-bs-toggle="modal" data-bs-target="#examModal">Forget password?</span>
-                                        <!-- <div class="modal" id="examModal">
+                                    <a href="#" onclick="" class="for"><span type="button" data-bs-toggle="modal"
+                                            data-bs-target="#examModal">Forget password?</span>
+                                        <div class="modal" id="examModal">
                                             <div class="modal-dialog">
                                                 <div class="modal-content wid">
                                                     <div class="modal-body">
@@ -94,11 +99,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </a>
                                 </div>
                                 <center class="pt-3">
-                                    <button type="submit" class="btn btn-primary col-5" onclick="login()">SIGN-IN</button>
+                                    <button type="submit" class="btn btn-primary col-5"
+                                        onclick="login()">SIGN-IN</button>
                                 </center>
                             </div>
                         </div>
@@ -107,39 +113,64 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function login() {
-            mail = em.value;
-            pass = pss.value;
-            tobi = JSON.parse(localStorage.getItem("project"));
-            for (i = 0; i < tobi.length; i++) {
-                if (mail == tobi[i].Email && pass == tobi[i].Password) {
-                    location.assign("raph.html");
-                    e1.innerHTML = "";
-                    e2.innerHTML = "";
-                }
-                if (mail !== tobi[i].Email && pass !== tobi[i].Password) {
-                    e1.innerHTML = "Enter your email";
-                    e1.style.color = "red";
-                    e2.innerHTML = "Enter your Password"; 
-                    e2.style.color = "red";  
-                }
+    <script type="text/javascript">
+        var second = [];
+        function tope(){
+            if (localStorage.abuja){
+                second = JSON.parse(localStorage.abuja)
             }
-            console.log(tobi);
+            // console.log(second);
         }
-        // const Update = () => {
-        //     let userEmail = email.value;
-        //     let userPassword = password.value;
-        //     let userconfirmPassword = cpassword.value;
-        //     together = JSON.parse(localStorage.getItem("project"))
-        //     for (let i = 0; i < together.length; i++) {
-        //         if (userEmail !== together[i].email) {
-        //             email.value = ""
-        //         }
-        //     }
-        //     location.assign("raph.html")
-        // }
+        function login(){ 
+            var mail
+            var pass 
+            another = {
+                mail: email.value,
+                pass: pwd.value
+            }
+            second.push(another)
+            localStorage.abuja = JSON.stringify(second)
+            tobi = JSON.parse(localStorage.getItem("abuja"));
+            // tobi.map((items,index)=>{
+            //     if (mail == tindex && pas == ) {
+            //         alert("now")
+            //     }
+            // })
+            for (let i = 0; i <tobi.length; i++){
+             if (mail== tobi[i].mail && pass == tobi[i].pass) {
+                alert("tobi")
+             }   
+            }
+            
+            // console.log(tobi);
+            // for (i = 0; i < tobi.length; i++) {
+            //     if (mail == tobi[i].Email && pass == tobi[i].Password) {
+            //         location.assign("raph.html");
+            //         e1.innerHTML = "";
+            //         e2.innerHTML = "";
+            //     }
+            //     if (mail !== tobi[i].Email && pass !== tobi[i].Password) {
+            //         e1.innerHTML = "Enter your email";
+            //         e1.style.color = "red";
+            //         e2.innerHTML = "Enter your Password"; 
+            //         e2.style.color = "red";  
+            //     }
+            // }
+            // console.log(tobi);
+
+            // const Update = () => {
+            //     let userEmail = email.value;
+            //     let userPassword = password.value;
+            //     let userconfirmPassword = cpassword.value;
+            //     together = JSON.parse(localStorage.getItem("project"))
+            //     for (let i = 0; i < together.length; i++) {
+            //         if (userEmail !== together[i].email) {
+            //             email.value = ""
+            //         }
+            //     }
+            //     location.assign("raph.html")
+            // }
+        }
     </script>
     <script src="./bootstrap.js"></script>
 </body>
