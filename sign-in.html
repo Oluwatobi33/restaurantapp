@@ -85,12 +85,12 @@
             </div>
         </div>
     </div>
-    <script>
-        function login(){
+    <script type="text/javascript">
+        function login() {
             tobi = JSON.parse(localStorage.getItem("project"));
-            if (email.value != "" && pwd.value != ""){
+            if (email.value != "" && pwd.value != "") {
                 for(const a of tobi){
-                    if (a["Email"] == email.value && a["Password"] == pwd.value.value) {
+                    if (a["Email"] == email.value && a["Password"] == pwd.value) {
                         localStorage.Email = JSON.stringify(email.value);
                         location.assign("raph.html");
                     }else{

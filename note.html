@@ -84,30 +84,8 @@
           </div>
         </nav>
       </header>
-
-
-      <!-- <section id="main" style="height: 88vh;" class=" col-12 justify-content-center">
-        <div class="form_container">
-            <h1>Note taker</h1>
-            <h3>Add a New Note:</h3>
-            <form>
-                <label for="title">Title 
-                  <input type="text" id="title" placeholder="Enter note Title">
-                </label>
-                <label for="note">Note 
-                  <textarea  name="note" id="note" cols="30" rows="10" placeholder="Enter Your note here"></textarea>
-                </label>
-                <button class='btn dis' onclick='save()' id="hov">Save</button>
-                <button class='btn dis' onclick='update()' style="display:none;" id="upd">update</button>
-            </form>
-        </div>  
-        <div class="note-container">
-          <div class="note" id="display"></div> 
-        </div>
-      </section> -->
       <section>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><h2>add new note</h2></button>
-        <!-- <button class="btn btn-primary col-10 col-md-4 my-2" onclick="only()">Display saved note</button> -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -149,7 +127,6 @@
       console.log(raph);
       for(let r = 0; r < raph.length; r++){
         nam.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
-        // location.innerHTML = raph[r].Address
       }
     }
   </script>
