@@ -112,7 +112,8 @@
         </div>
       </section> -->
       <section>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="background-color:#15273B;color:white;"><h2>add new note</h2></button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><h2>add new note</h2></button>
+        <!-- <button class="btn btn-primary col-10 col-md-4 my-2" onclick="only()">Display saved note</button> -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -122,7 +123,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="container d-flex my-2">
-                            <p class="pr-2">Title</p>   
+                            <p class="pr-2">Title</p> 
                             <input type="text" id="title" class="form-control" placeholder="Enter note Title">
                         </div>
                         <div class="container d-flex">
@@ -132,14 +133,14 @@
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close note</button>
-                    <button type="button" class="btn dis"  data-bs-dismiss="modal"onclick="save()" style="background-color:#15273B;color:white;" id="hov">Save note</button>
-                    <button type="button" class="btn dis" onclick="Update()" style="background-color:#15273B;color:white;display:none;" id="upd">Update note</button>
+                    <button type="button" class="btn dis" data-bs-dismiss="modal" onclick="save()" style="background-color:#15273B;color:white;">Save note</button>
+                    <button type="button" class="btn dis" onclick="Update()" style="background-color:#15273B;color:white;display:none;">Update note</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="note-container">
-            <div class="note" id="display"></div> 
+          <div class="note" id="display"></div> 
         </div>
     </section>
 

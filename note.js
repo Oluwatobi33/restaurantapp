@@ -25,7 +25,7 @@ const save = ()=>{
         })
         localStorage.member = JSON.stringify(tobi);
     }else{
-        // alert("You are not permited to submit an empty note")
+        alert("This is an empty note, it will not be saved")
     }
 }
 const only = ()=>{
