@@ -9,151 +9,198 @@
   <link rel="stylesheet" href="style.css">
   <title>SIGN UP PAGE</title>
   <style>
-     .form-control{
-            box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
-        }
-        .moback {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          width: 55vh;
-          height: 87vh !important;
-          pointer-events: auto;
-          background-color: #fff;
-          background-clip: padding-box;
-          border: 1px solid rgba(0, 0, 0, 0.2);
-          border-radius: 1.9rem;
-          outline: 0;
-        }
-        @media screen and (max-width:414px){
-          .moback{
-            height: 107vh !important;
-            width: 52vh !important;
-          }
-          #out{
-            height: 94vh !important;
-          }
-        }
-        .modal-body {
-          margin-top: -65px;
-        }
-        /* .mm {
+    .form-control {
+      box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
+      margin-top: 9px;
+    }
+
+    .moback {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 120vh;
+      height: 87vh !important;
+      pointer-events: auto;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 1.9rem;
+      outline: 0;
+    }
+
+    @media screen and (max-width:414px) {
+      .moback {
+        height: 98vh !important;
+        width: 52vh !important;
+      }
+
+      #out {
+        height: 94vh !important;
+      }
+    }
+
+    .modal-body {
+      margin-top: -65px;
+    }
+    .click {
+      background-color: white;
+      padding: 13px 19px;
+      margin-top: 24px;
+    }
+    /* .mm {
           border-radius: 20px !important;
           box-shadow: 0 0 9px 2px rgb(100, 100, 100, 0.30);
           height: 75vh !important;
         } */
-        .okay {
-            border-radius: 53px;
-        }
-        .dd {
-          border: 1px solid black;
-          margin: 9px 0;
-          height: 14px;
-          border: none;
-        }
+    .okay {
+      border-radius: 53px;
+    }
+
+    .dd {
+      border: 1px solid black;
+      margin: 9px 0;
+      height: 14px;
+      border: none;
+    }
+
+    .transparent {
+      /* background: rgba(255, 255, 255, 0.06); */
+      /* background-color: #15273B; */
+      /* background-color: #15273B; */
+    
+    }
+    .now {
+      background-color: #15273B;
+    }
+    .nice {
+      padding-top: -29px !important;
+    }
   </style>
 </head>
 
-<body  class="bg-dark">
-  <!-- Button trigger modal -->
-  <div class="container" style="height: 50vh;">
-    
-    
+<body class="now">
     <!-- Modal -->
-    <div class="" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="moback">
-          <div class="modal-body">
-            <div class="container mt-2 ">
-              <div class="row  justify-content-center mt-5">
-                <div id="out" class="col-md-12  form-group px-4  rounded rounded-5">
-                  <h1 class=" fw-bold text-center text-uppercase text-dark mt-4" style="font-size:19px ;">Registration page</h1>
-                  <input type="text" class="form-control" value="" id="fname" placeholder="FirstName">
-                   <div class="dd">
-                    <small id="err1" class=""></small>
-                   </div>          
-                  <input type="text" class="form-control" value="" id="lname" placeholder="LastName">
-                  <div class="dd">
-                    <small id="err2" class=""></small>
-                  </div>
-                  <input type="text" class="form-control" value="" id="add" placeholder="Address">
-                  <div class="dd">
-                    <small id="err3" class=""></small>
-                  </div>
-                  <input type="text" class="form-control" value="" id="email" placeholder="Email">
-                  <div class="dd">
-                    <small id="err4" class=""></small>
-                  </div>
-                  <input type="text" class="form-control" value="" id="pwd" placeholder="Password">
-                  <div class="dd">
-                    <small id="err5" class=""></small>
-                  </div>
-                  <input type="tel" class="form-control" value="" id="pass" placeholder="Phone-number">
-                  <div class="dd">
-                    <small id="err6" class=""></small>
-                  </div>
-                    <select class="form-control" id="gen">
-                      <option value="">Choose Gender</option>
-                      <option  value="1">Male</option>
-                      <option  value="2">Female</option>
-                    </select>
-                      <small class="text-dark mx-2 mt-3"> ALREADY SIGN IN</small><a href="sign-in.html" class="text-danger">sign-in?</a>
-                      <a  class="btn btn-primary mt-3" onclick="show()" style="margin-left: 43px;" >Sign up</a>
-                  </div>
+    <div class="container transparent mt-5 pb-5 ">
+      <div class="row justify-content-center nice ">
+        <div class="col-11 ">
+          <div class="row justify-content-center mt-5 ">
+            <h1 class=" fw-bold text-center text-uppercase text-white mt-4" style="font-size:19px ;">Registration
+              page</h1>
+            <div class="col-md-6">
+              <input type="text" class="form-control" value="" id="fname" placeholder="FirstName">
+              <div class="dd">
+                <small id="err1" class=""></small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" value="" id="lname" placeholder="LastName">
+              <div class="dd">
+                <small id="err2" class=""></small>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                <select class="form-control" id="gen">
+                  <option value="1">Choose Gender</option>
+                  <option value="2">Male</option>
+                  <option value="3">Female</option>
+                </select>
+                <div class="dd">
+                  <small id="err7" class=""></small>
                 </div>
               </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" value="" id="email" placeholder="Email">
+                <div class="dd">
+                  <small id="err4" class=""></small>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" value="" id="pwd" placeholder="Password">
+              <div class="dd">
+                <small id="err5" class=""></small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control" value="" id="pass" placeholder="Phone-number">
+              <div class="dd">
+                <small id="err6" class=""></small>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input type="text" class="form-control" value="" id="add" placeholder="Address">
+              <div class="dd">
+                <small id="err3" class=""></small>
+              </div>
+            </div>
+           </div>
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <small class="text-white mx-2 fs-5 mb-5 fst-italic">ALREADY SIGN IN<a class="fs-5 text-danger fst-italic ps-3" href="sign-in.html"
+                class="text-danger">sign-in?</a></small>
+               <span class="click"><a class="text-dark fs-5 fst-italic" href="#" onclick="show()">Sign up</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
-        var together = []
-        function show(){
-          if(localStorage.project){
-            together = JSON.parse(localStorage.project)
-          } 
-          let gd = document.getElementById('gen');
-          let gd2 = gd.options[gd.selectedIndex].text;
-          let rush = {
-            ffname:fname.value,
-            LstName:lname.value,
-            Address:add.value,
-            Email:email.value,
-            Password:pwd.value,
-            PhoneNumber:pass.value,
-            Gender:gd2,
-            contact: [],
-            event:[]
+  </div>
+  <script>
+    var together = []
+    function show() {
+      if (localStorage.project) {
+        together = JSON.parse(localStorage.project)
+      }
+      let gd = document.getElementById('gen');
+      let gd2 = gd.options[gd.selectedIndex].text;
+      let rush = {
+        ffname: fname.value,
+        LstName: lname.value,
+        Address: add.value,
+        Email: email.value,
+        Password: pwd.value,
+        PhoneNumber: pass.value,
+        Gender: gd2,
+        contact: [],
+        event: []
 
-          }
-          if(fname.value == "" ||  lname.value == "" || add.value == ""  || pwd.value == "" || pass.value == "" || gd2 == ""){
-            err1.innerHTML = "Enter the value of the firstname"
-            err1.style.color = "red";
-            err2.innerHTML = "Enter the value of the Lastname"
-            err2.style.color = "red";
-            err3.innerHTML = "Enter the value of the address"
-            err3.style.color = "red";
-            err4.innerHTML = "Enter the value of the email"
-            err4.style.color = "red";
-            err5.innerHTML = "Enter the value of the password"
-            err5.style.color = "red";
-            err6.innerHTML = "Enter the value of the phoneNumber"
-            err6.style.color = "red";
-            err6.innerHTML = "Enter the value of the gender"
-            err6.style.color = "red";
-          }
-          else {
-            together.push(rush)
-            localStorage.project = JSON.stringify(together)
-            console.log(together)
-            location.assign("sign-in.html")
-          }
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-    <script src="./bootstrap.js"></script>
+      }
+      if (fname.value == "" || lname.value == "" || add.value == "" || email.value == "" || pwd.value == "" || pass.value == "" || gd2 == ""){
+        err1.innerHTML = "Enter the value of the firstname"
+        err1.style.color = "red";
+        err2.innerHTML = "Enter the value of the Lastname"
+        err2.style.color = "red";
+        err3.innerHTML = "Enter the value of the address"
+        err3.style.color = "red";
+        err4.innerHTML = "Enter the value of the email"
+        err4.style.color = "red";
+        err5.innerHTML = "Enter the value of the password"
+        err5.style.color = "red";
+        err6.innerHTML = "Enter the value of the phoneNumber"
+        err6.style.color = "red";
+        err7.innerHTML = "Enter the value of the gender"
+        err7.style.color = "red";
+      }
+      else {
+        together.push(rush)
+        localStorage.project = JSON.stringify(together)
+        console.log(together)
+        location.assign("sign-in.html")
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+  <script src="./bootstrap.js"></script>
 </body>
 
 </html>
