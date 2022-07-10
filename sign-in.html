@@ -90,16 +90,14 @@
         function login() {
             tobi = JSON.parse(localStorage.getItem("project"));
             if (email.value != "" && pwd.value != "") {
-                for(const a of tobi){
-                    if (a["Email"] == email.value && a["Password"] == pwd.value) {
-                        localStorage.Email = JSON.stringify(email.value);
-                        location.assign("raph.html");
-                    }else{
-                        e1.innerHTML = "Enter the correct email"
-                        e1.style.color = "red";
-                        e2.innerHTML = "Enter the correct password"
-                        e2.style.color = "red";
-                    }
+                if (tobi["Email"] == email.value && tobi["Password"] == pwd.value) {
+                    localStorage.Email = JSON.stringify(email.value);
+                    location.assign("raph.html");
+                }else{
+                    e1.innerHTML = "Enter the correct email"
+                    e1.style.color = "red";
+                    e2.innerHTML = "Enter the correct password"
+                    e2.style.color = "red";
                 }
             }else{
                 e1.innerHTML = "Enter your email"

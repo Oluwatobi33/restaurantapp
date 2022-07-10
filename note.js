@@ -53,7 +53,7 @@ const del = (index)=>{
         })
         display.innerHTML = "";
         only();
-        localStorage.member = JSON.stringify(val);
+        localStorage.member = JSON.stringify(tobi);
     }
 }
 let ind;
@@ -78,5 +78,5 @@ const Update = ()=>{
     location.reload()
 }
 const logout = ()=>{
-    localStorage.removeItem("userEmail")
+    localStorage.removeItem("Email")
 }
