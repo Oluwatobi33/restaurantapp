@@ -1,8 +1,8 @@
 tobi = JSON.parse(localStorage.getItem("project"));
-var mail = JSON.parse(localStorage.getItem("Email"));
+var loginuser = JSON.parse(localStorage.getItem("Eail"));
 let receiver;
 tobi.map((item,index)=>{
-    if (tobi[index].Email == mail) {
+    if (tobi[index].Email == loginuser) {
         receiver = tobi[index].note
     }
 })
@@ -18,9 +18,9 @@ const save = ()=>{
         title.value = "";
         note.value = "";
         tobi.map((item,index)=>{
-            if (tobi[index].userEmail == mail) {
+            if (tobi[index].userEmail == loginuser) {
                 tobi[index].userNote = receiver;
-                console.log(tobi[index].userNote);
+                console.log(tobi[index].note);
             }
         })
         localStorage.member = JSON.stringify(tobi);
@@ -46,9 +46,9 @@ const del = (index)=>{
         let filteredArray = receiver.filter((item,ind)=>index != ind);
         receiver = filteredArray;
         tobi.map((item,index)=>{
-            if (tobi[index].userEmail == mail) {
+            if (tobi[index].userEmail == loginuser) {
                 tobi[index].userNote = receiver;
-                console.log(tobi[index].userNote);
+                console.log(tobi[index].note);
             }
         })
         display.innerHTML = "";
@@ -63,9 +63,9 @@ const edit = (index)=>{
         title.value = receiver[index].userTitle;
         note.value = receiver[index].userNote;
         tobi.map((item,index)=>{
-            if (tobi[index].userEmail == mail) {
+            if (tobi[index].userEmail == loginuser) {
                 tobi[index].userNote = receiver;
-                console.log(tobi[index].userNote);
+                console.log(tobi[index].note);
             }
         })
         ind = index;
@@ -74,9 +74,6 @@ const edit = (index)=>{
         location.reload()
     }
 }
-const Update = ()=>{
-    location.reload()
-}
 const logout = ()=>{
-    localStorage.removeItem("Email")
+    localStorage.removeItem("Eail")
 }
