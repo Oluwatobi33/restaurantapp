@@ -67,10 +67,8 @@
                         <div class="container px-2 bos">
                             <h2 class="text-center" style="color: rgb(25, 25, 87);"><i>SIGN-IN</i></h2>
                             <div>
-                                <input type="text" id="email" class="form-control border rounded my-4"
-                                    placeholder="Your Email address"><small id="e1"></small>
-                                <input type="text" id="pwd" class="form-control border rounded my-3"
-                                    placeholder="Your password"><small id="e2"></small>
+                                <input type="text" id="email" class="form-control border rounded my-4" placeholder="Your Email address"><small id="e1"></small>
+                                <input type="text" id="pwd" class="form-control border rounded my-3" placeholder="Your password"><small id="e2"></small>
                                 <div class="py-2" style="color: rgb(25, 25, 87);">
                                     <input type="checkbox">Remember me
                                     <!-- <a href="#" onclick="" class="for"><span type="button" data-bs-toggle="modal" data-bs-target="#examModal">Forget password?</span></a> -->
@@ -91,7 +89,7 @@
             if (email.value != "" && pwd.value != "") {
                 for(const a of tobi){
                     if (a["Email"] == email.value && a["Password"] == pwd.value) {
-                        localStorage.Email = JSON.stringify(email.value);
+                        localStorage.Eail = JSON.stringify(email.value);
                         location.assign("raph.html");
                     }else{
                         e1.innerHTML = "Enter the correct email"
@@ -109,7 +107,6 @@
             }
             email.value = "";
             pwd.value = "";
-            // console.log(tobi);
         }
     </script>
     <script src="./bootstrap.js"></script>

@@ -128,15 +128,14 @@
                             <label class="fw-bold text-white float-start">Address</label>
                             <input   placeholder="&#xe8a3; Address" class=" form-control" id="add">
                             <label class="fw-bold text-white float-start">Email</label>
-                            <input class=" form-control" placeholder="Email" id="em">
+                            <input class=" form-control" placeholder="Email" id="email">
                             <label class="fw-bold text-white float-start">Password</label>
                             <input class=" form-control" placeholder="Password" id="pss">
+                            <label class="fw-bold text-white float-start">Phone-number</label>
+                            <input class=" form-control" placeholder="PhoneNumber" id="phn">
                             <label class="fw-bold text-white float-start">Sex</label>
-                            <select class="form-control" id="gender">
-                              <option value="">Choose Gender</option>
-                              <option  value="1">Male</option>
-                              <option  value="2">Female</option>
-                            </select>
+                            <input class=" form-control" placeholder="Gender" id="gen">
+                          
                           </div>
                       </div>
                   </div>
@@ -144,7 +143,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" onclick="save()">Save changes</button>
               </div>
             </div>
           </div>
@@ -154,23 +153,69 @@
   </section>
   <!-- Modal -->
   <script>
-    let raph = JSON.parse(localStorage.getItem("project"));
-    for(let r = 0; r < raph.length; r++){
-      nam2.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
+    
+    const save = ()=>{
+    tobi = JSON.parse(localStorage.getItem("project"))
+    second = JSON.parse(localStorage.getItem("Eail"))
+     var anu = []; 
+    tobi.map((items,index)=>{
+      if (tobi[index].Email==second) {
+         anu = tobi[index].contact;
       }
-      tobi = JSON.parse(localStorage.getItem("project"))
-        console.log(tobi)
-        for(i = 0; i <tobi.length; i++){
-            document.getElementById("fir").value = tobi[i].ffname
-            document.getElementById("lsname").value = tobi[i].LstName
-            document.getElementById("add").value = tobi[i].Address
-            document.getElementById("em").value = tobi[i].Email
-            document.getElementById("pss").value = tobi[i].Password
-            let gg =document.getElementById("gen").ivalue= tobi[i].Gender
-            let  gg2 = gg.options[gg.selectedIndex].text
-            document.getElementById("gen") = gg2 
+    })
+//  var  newTobi = tobi.filter((items)=>items.contact)
+  //     contact = newTobi;
+  //  console.log(newTobi);
+  // 
+      let first = fir.value;
+       fir.value = "";
+       let last = lsname.value;
+       lsname.value = "";
+       let addrr = add.value;
+       add.value = "";
+       let pasw = pss.value;
+       pss.value = "";
+       let em = email.value;
+       email.value = "";
+       let phoneNO = phn.value;
+       phn.value = "";
+       let Gender = gen.value
+       gen.value = ""
+      con = {
+       firstname:first,
+       lastname:last,
+       address:addrr,
+       password:pasw,
+       Email:em,
+       PhoneNumber:phoneNO,
+       Sex:Gender
+      }
+      anu.push(con);
+      console.log(anu);
+      }
 
-        }
+   
+    // let nn =  tobi.filter((item,index)=>index == contact)
+    // console.log(nn);
+    // let raph = JSON.parse(localStorage.getItem("project"));
+    // for(let r = 0; r < raph.length; r++){
+    //   nam2.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
+    //   }
+    
+        // for(i = 0; i <tobi.length; i++){
+        //    let firstname = fir.value
+        //    console.log(firstname);
+            // document.getElementById("lsname").value
+            // document.getElementById("add").value
+            // document.getElementById("em").value
+            // document.getElementById("pss").value
+            // document.getElementById("pwd").value
+            // let gg =document.getElementById("gen").ivalue= tobi[i].Gender
+            // let  gg2 = gg.options[gg.selectedIndex].text
+            // document.getElementById("gen") = gg2 
+
+        
+        
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>

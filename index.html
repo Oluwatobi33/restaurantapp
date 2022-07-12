@@ -64,16 +64,16 @@
   </style>
 </head>
 
-<body class="now">
+<body class="now" onload="spec()">
     <!-- Modal -->
-    <div class="container transparent mt-5 pb-5 ">
+    <div class="container transparent mt-5 pb-5">
       <div class="row justify-content-center nice ">
         <div class="col-11 ">
           <div class="row justify-content-center mt-5 ">
             <h1 class=" fw-bold text-center text-uppercase text-white mt-4" style="font-size:19px ;">Registration
               page</h1>
             <div class="col-md-6">
-              <input type="text" class="form-control" value="" id="fname" placeholder="FirstName">
+              <input type="text" class="form-control"  value="" id="fname" placeholder="FirstName">
               <div class="dd">
                 <small id="err1" class=""></small>
               </div>
@@ -87,11 +87,7 @@
           </div>
           <div class="row">
               <div class="col-md-6">
-                <select class="form-control" id="gen">
-                   <small value="1">Choose Gender</small> 
-                  <option value="2">Male</option>
-                  <option value="3">Female</option>
-                </select>
+                <input type="text" class="form-control" value="" id="gen" placeholder="Gender">
                 <div class="dd">
                   <small id="err7"></small>
                 </div>
@@ -138,12 +134,88 @@
   </div>
   <script type="text/javascript">
     var together = []
-    function show() {
+    function spec(){
       if (localStorage.project) {
         together = JSON.parse(localStorage.project)
       }
-      let gd = document.getElementById('gen');
-      let gd2 = gd.options[gd.selectedIndex].text;
+      
+    }
+    function show(){
+        if (fname.value == "" || lname.value == "" || add.value == "" || email.value == "" || pwd.value == "" || pass.value == "" || gen.value == ""){
+        var firstname = fname.value;
+        var regfname = /^[a-zA-z]{3,15}$/;
+        if (regfname.test(firstname)==false){
+            err1.innerText = "Enter the value of  firstname";
+            err1.style.color = "red";
+        }
+        else{
+          console.log(regfname.test(firstname));
+        }
+
+        var lastname = lname.value;
+        var reglname = /^([a-zA-z]{3,15})$/;
+        if (reglname.test(lastname)==false){
+            err2.innerText = "Enter the value of  lastname";
+            err2.style.color = "red";
+        }
+        else{
+          console.log(reglname.test(lastname));
+        }
+
+        var address = add.value;
+        var regadd = /^[\w]+$/;
+        if (regadd.test(address)==false){
+            err3.innerText = "Enter the address";
+            err3.style.color = "red";
+        }
+        else{
+          console.log(regadd.test(address));
+        }
+        
+        var Email = email.value;
+        var regemail = /^([\w]+)([@])([a-z]{3,7})([.])([a-z]{3,6})(([.][a-z]{2,5})?)$/;
+        if (regemail.test(Email)==false){
+            err4.innerText = "Enter your Email";
+            err4.style.color = "red";
+        }
+        else{
+          console.log(regemail.test(Email));
+        }
+
+        var password = pwd.value;
+        var regpass = /^([\w]{3,15})([&]?)([@]?)$/;
+        if (regpass.test(password)==false){
+            err5.innerText = "Enter the password";
+            err5.style.color = "red";
+        }
+        else{
+          console.log(regpass.test(password));
+        }
+
+        var PhoneNumber = pass.value;
+        var regphon = /^([\d]){11}$/;
+        if (regphon.test(PhoneNumber)==false){
+            err6.innerText = "Enter the value of phoneNumber";
+            err6.style.color = "red";
+        }
+        else{
+          console.log(regphon.test(PhoneNumber));
+        }
+        var Gender = gen.value;
+        var reggen = /^([w]){9}$/;
+        if (reggen.test(Gender)==false){
+            err7.innerText = "Enter the value of Gender";
+            err7.style.color = "red";
+        }
+        else{
+          console.log(reggen.test(Gender));
+        }
+        
+      }if ( rush.Email==localStorage.project) {
+        err4.innerText = "Email already exist"
+        err4.style = "red" 
+      }
+      else{  
       var rush = {
         ffname: fname.value,
         LstName: lname.value,
@@ -151,77 +223,18 @@
         Email: email.value,
         Password: pwd.value,
         PhoneNumber: pass.value,
-        Gender: gd2,
+        Gender: gen.value,
         contact: [],
         note:[],
         event: []
       }
-      if(fname.value == ""){
-        err1.innerHTML = "Enter the value firstname"
-        err1.style.color = "red"
-      }
-      if(lname.value == ""){
-        err2.innerHTML = "Enter the value lastname"
-        err2.style.color = "red"
-        
-      }
-      if(add.value == ""){
-        err3.innerHTML = "Enter the value address"
-        err3.style.color = "red"
-      }
-      if(email.value == ""){
-        err4.innerHTML = "Enter the value email"
-        err4.style.color = "red"
-      }
-      if(pwd.value == ""){
-        err5.innerHTML = "Enter the value address"
-        err5.style.color = "red"
-      }
-      if(pass.value == ""){
-        err6.innerHTML = "Enter the value address"
-        err6.style.color = "red"
-      }
-      if(gd2.value == ""){
-        err7.innerHTML = "Enter the value address"
-        err7.style.color = "red"
-      }
-      else if (fname.value !== "") {
-        err1.innerHTML = "successfull";
-        err1.style.color = "green";
 
+      together.push(rush)
+      localStorage.project = JSON.stringify(together)
+      console.log(together)
+      location.assign("sign-in.html")
       }
-      else if(lname.value !== ""){
-          err2.innerHTML = "successfull";
-          err2.style.color = "green";
-      }
-      else if (add.value !== ""){
-        err3.innerHTML = "successfull";
-        err3.style.color = "green";
-      }
-      else if (email.value !== ""){
-        err4.innerHTML = "successfull"
-        err4.innerHTML = "green";
-      }
-      else if(pwd.value !== ""){
-        err5.innerHTML = "successfull";
-        err5.style.color = "green";
-      }
-      else if (pass.value !== ""){
-        err6.innerHTML = "successfull";
-        err6.style.color = "green";
-      }
-      else if(gd2.value !== ""){
-        err7.innerHTML = "successfull";
-        err7.style.color = "green";
-      }
-       
-        together.push(rush)
-        localStorage.project = JSON.stringify(together)
-        console.log(together)
-        location.assign("sign-in.html")
-      
-    }
-    
+    }  
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
