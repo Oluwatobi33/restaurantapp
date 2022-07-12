@@ -156,17 +156,7 @@
     
     const save = ()=>{
     tobi = JSON.parse(localStorage.getItem("project"))
-    second = JSON.parse(localStorage.getItem("Eail"))
      var anu = []; 
-    tobi.map((items,index)=>{
-      if (tobi[index].Email==second) {
-         anu = tobi[index].contact;
-      }
-    })
-//  var  newTobi = tobi.filter((items)=>items.contact)
-  //     contact = newTobi;
-  //  console.log(newTobi);
-  // 
       let first = fir.value;
        fir.value = "";
        let last = lsname.value;
@@ -181,7 +171,7 @@
        phn.value = "";
        let Gender = gen.value
        gen.value = ""
-      con = {
+       con = {
        firstname:first,
        lastname:last,
        address:addrr,
@@ -192,15 +182,16 @@
       }
       anu.push(con);
       console.log(anu);
+      localStorage.setItem("contact2", JSON.stringify(anu))
       }
 
-   
+    
     // let nn =  tobi.filter((item,index)=>index == contact)
     // console.log(nn);
-    // let raph = JSON.parse(localStorage.getItem("project"));
-    // for(let r = 0; r < raph.length; r++){
-    //   nam2.innerHTML =raph[r].ffname + '  ' +'  '+  raph[r].LstName
-    //   }
+      let raph = JSON.parse(localStorage.getItem("project"));
+      for(let r = 0; r <raph.length; r++){
+      nam2.innerHTML = raph[r].ffname + '  ' +'  '+  raph[r].LstName
+      }
     
         // for(i = 0; i <tobi.length; i++){
         //    let firstname = fir.value
