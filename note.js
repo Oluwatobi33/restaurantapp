@@ -35,7 +35,7 @@ const save = ()=>{
                 console.log(tobi[index].note);
             }
         })
-        localStorage.member = JSON.stringify(tobi);
+        localStorage.project = JSON.stringify(tobi);
     }else{
         alert("This is an empty note, it will not be saved")
     }
@@ -53,7 +53,7 @@ const del = (index)=>{
         })
         display.innerHTML = "";
         only();
-        localStorage.member = JSON.stringify(tobi);
+        localStorage.project = JSON.stringify(tobi);
     }
 }
 let ind;
