@@ -7,7 +7,7 @@ tobi.map((item,index)=>{
     }
 })
 const only = ()=>{
-    for (var index = hass.length -1; index >= 0; index--) {
+    for (var index = hass.length -1; index >= 0; index--){
         display.innerHTML += `<div class="container col-12 col-md-6 card my-2" style="background-color: #15273B;">
             <h2 class="text-light">${hass[index].userTitle}</h2>
             <p class="text-light">${hass[index].userNote}</p>
