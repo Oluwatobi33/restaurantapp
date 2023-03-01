@@ -63,7 +63,7 @@ const edit = (index)=>{
         title.value = hass[index].userTitle;
         note.value = hass[index].userNote;
         tobi.map((item,index)=>{
-            if (tobi[index].Email == loginuser) {
+            if (tobi[index].Email == loginuser){
                 tobi[index].note = hass;
                 console.log(tobi[index].note);
             }
@@ -75,5 +75,5 @@ const edit = (index)=>{
     }
 }
 const logout = ()=>{
-    localStorage.removeItem("Eail")
+    localStorage.removeItem("Eail");
 }
